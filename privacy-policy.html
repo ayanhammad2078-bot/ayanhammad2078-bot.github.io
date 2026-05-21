@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy - Calculator Hub</title>
+  <meta name="description" content="Privacy Policy for Calculator Hub. Learn how we handle your data and our commitment to your privacy." />
+  <meta name="robots" content="index, follow" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-brand">Calculator <span>Hub</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li class="nav-item">
+        <a href="#">Calculators <span class="dropdown-arrow">▼</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="bmi.html">BMI Calculator</a></li>
+          <li><a href="loan-calculator.html">Loan Calculator</a></li>
+          <li><a href="gpa-calculator.html">GPA Calculator</a></li>
+          <li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+          <li><a href="age-calculator.html">Age Calculator</a></li>
+          <li><a href="compound-interest.html">Compound Interest</a></li>
+          <li><a href="calorie-calculator.html">Calorie Calculator</a></li>
+          <li><a href="unit-converter.html">Unit Converter</a></li>
+          <li><a href="discount-calculator.html">Discount Calculator</a></li>
+          <li><a href="time-calculator.html">Time Calculator</a></li>
+          <li><a href="geometry-calculator.html">Geometry Calculator</a></li>
+          <li><a href="trig-calculator.html">Trigonometry</a></li>
+          <li><a href="algebra-calculator.html">Algebra Calculator</a></li>
+          <li><a href="school-calculator.html">School Edition</a></li>
+        </ul>
+      </li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li><a href="privacy-policy.html" class="active">Privacy Policy</a></li>
+      <li><a href="contact-us.html">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="page-wrapper">
+  <section class="calc-container">
+    <h1 style="color: #f1f5f9; margin-bottom: 1.5rem;">Privacy Policy</h1>
+    
+    <div style="color: #94a3b8; line-height: 1.6;">
+      <p>Last updated: May 21, 2026</p>
+      
+      <h2 style="color: #f1f5f9; margin-top: 1.5rem;">1. Information Collection</h2>
+      <p>At Calculator Hub, we prioritize your privacy. We do not collect, store, or share any personal information. All calculations are performed locally in your browser using JavaScript. Your data never leaves your device.</p>
+      
+      <h2 style="color: #f1f5f9; margin-top: 1.5rem;">2. Cookies</h2>
+      <p>We use cookies to improve your user experience and analyze website traffic. By using our website, you consent to our use of cookies.</p>
+      
+      <h2 style="color: #f1f5f9; margin-top: 1.5rem;">3. Google AdSense</h2>
+      <p>We use Google AdSense to serve advertisements. Google may use cookies (such as the DART cookie) to serve ads based on your visit to our site and other sites on the internet. You may opt out of personalized advertising by visiting Google's Ad Settings.</p>
+      
+      <h2 style="color: #f1f5f9; margin-top: 1.5rem;">4. Third-Party Services</h2>
+      <p>Our website may contain links to third-party services. We are not responsible for the privacy practices or content of these third parties.</p>
+      
+      <h2 style="color: #f1f5f9; margin-top: 1.5rem;">5. Data Protection</h2>
+      <p>We do not sell, trade, or otherwise transfer your data to outside parties. Your privacy and trust are our top priorities.</p>
+      
+      <h2 style="color: #f1f5f9; margin-top: 1.5rem;">6. User Rights</h2>
+      <p>You have the right to access the website without providing any personal data. You can also disable cookies in your browser settings at any time.</p>
+      
+      <h2 style="color: #f1f5f9; margin-top: 1.5rem;">7. Contact Information</h2>
+      <p>If you have any questions about this Privacy Policy, please contact us through our Contact Us page.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about-us.html">About Us</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="contact-us.html">Contact Us</a>
+    <a href="bmi.html">BMI Calculator</a>
+    <a href="loan-calculator.html">Loan Calculator</a>
+    <a href="gpa-calculator.html">GPA Calculator</a>
+    <a href="percentage-calculator.html">Percentage Calculator</a>
+    <a href="age-calculator.html">Age Calculator</a>
+    <a href="compound-interest.html">Compound Interest</a>
+    <a href="calorie-calculator.html">Calorie Calculator</a>
+    <a href="unit-converter.html">Unit Converter</a>
+    <a href="discount-calculator.html">Discount Calculator</a>
+    <a href="time-calculator.html">Time Calculator</a>
+    <a href="geometry-calculator.html">Geometry Calculator</a>
+    <a href="trig-calculator.html">Trigonometry Calculator</a>
+    <a href="algebra-calculator.html">Algebra Calculator</a>
+    <a href="school-calculator.html">School Calculator</a>
+  </div>
+  <p>&copy; 2025 Calculator Hub. All rights reserved. Free online calculators for everyone.</p>
+</footer>
+
+<script src="ai-math-assistant.js"></script>
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => { navLinks.classList.toggle('open'); });
+  document.querySelectorAll(".nav-links > li > a:not(.nav-item > a)").forEach(link => {
+    link.addEventListener('click', () => { navLinks.classList.remove('open'); });
+  });
+  const navItemWithDropdown = document.querySelector(".nav-item");
+  const dropdownToggle = navItemWithDropdown.querySelector("a");
+  dropdownToggle.addEventListener('click', (e) => {
+    if (window.innerWidth <= 768 && navLinks.classList.contains('open')) {
+      e.preventDefault();
+      navItemWithDropdown.classList.toggle('active');
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Calculator Hub</title>
+  <meta name="description" content="Contact Calculator Hub for any questions, suggestions, or feedback." />
+  <meta name="robots" content="index, follow" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-brand">Calculator <span>Hub</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li class="nav-item">
+        <a href="#">Calculators <span class="dropdown-arrow">▼</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="bmi.html">BMI Calculator</a></li>
+          <li><a href="loan-calculator.html">Loan Calculator</a></li>
+          <li><a href="gpa-calculator.html">GPA Calculator</a></li>
+          <li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+          <li><a href="age-calculator.html">Age Calculator</a></li>
+          <li><a href="compound-interest.html">Compound Interest</a></li>
+          <li><a href="calorie-calculator.html">Calorie Calculator</a></li>
+          <li><a href="unit-converter.html">Unit Converter</a></li>
+          <li><a href="discount-calculator.html">Discount Calculator</a></li>
+          <li><a href="time-calculator.html">Time Calculator</a></li>
+          <li><a href="geometry-calculator.html">Geometry Calculator</a></li>
+          <li><a href="trig-calculator.html">Trigonometry</a></li>
+          <li><a href="algebra-calculator.html">Algebra Calculator</a></li>
+          <li><a href="school-calculator.html">School Edition</a></li>
+        </ul>
+      </li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="contact-us.html" class="active">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="page-wrapper">
+  <section class="calc-container">
+    <h1 style="color: #f1f5f9; margin-bottom: 1.5rem;">Contact Us</h1>
+    
+    <div style="color: #94a3b8; line-height: 1.6;">
+      <p>We value your feedback and are here to help with any questions or suggestions you may have about Calculator Hub.</p>
+      
+      <h2 style="color: #f1f5f9; margin-top: 1.5rem;">Get in Touch</h2>
+      <p>If you have a suggestion for a new calculator, found a bug, or just want to say hi, please feel free to reach out to us.</p>
+      
+      <p>You can contact us via email at:</p>
+      <p style="color: #38bdf8; font-weight: bold; font-size: 1.2rem;">support@calculatorhub.com</p>
+      
+      <h2 style="color: #f1f5f9; margin-top: 1.5rem;">Social Media</h2>
+      <p>Stay updated with our latest tools and updates by following us on social media.</p>
+      
+      <p>We aim to respond to all inquiries within 24-48 hours. Thank you for your support!</p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about-us.html">About Us</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="contact-us.html">Contact Us</a>
+    <a href="bmi.html">BMI Calculator</a>
+    <a href="loan-calculator.html">Loan Calculator</a>
+    <a href="gpa-calculator.html">GPA Calculator</a>
+    <a href="percentage-calculator.html">Percentage Calculator</a>
+    <a href="age-calculator.html">Age Calculator</a>
+    <a href="compound-interest.html">Compound Interest</a>
+    <a href="calorie-calculator.html">Calorie Calculator</a>
+    <a href="unit-converter.html">Unit Converter</a>
+    <a href="discount-calculator.html">Discount Calculator</a>
+    <a href="time-calculator.html">Time Calculator</a>
+    <a href="geometry-calculator.html">Geometry Calculator</a>
+    <a href="trig-calculator.html">Trigonometry Calculator</a>
+    <a href="algebra-calculator.html">Algebra Calculator</a>
+    <a href="school-calculator.html">School Calculator</a>
+  </div>
+  <p>&copy; 2025 Calculator Hub. All rights reserved. Free online calculators for everyone.</p>
+</footer>
+
+<script src="ai-math-assistant.js"></script>
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => { navLinks.classList.toggle('open'); });
+  document.querySelectorAll(".nav-links > li > a:not(.nav-item > a)").forEach(link => {
+    link.addEventListener('click', () => { navLinks.classList.remove('open'); });
+  });
+  const navItemWithDropdown = document.querySelector(".nav-item");
+  const dropdownToggle = navItemWithDropdown.querySelector("a");
+  dropdownToggle.addEventListener('click', (e) => {
+    if (window.innerWidth <= 768 && navLinks.classList.contains('open')) {
+      e.preventDefault();
+      navItemWithDropdown.classList.toggle('active');
+    }
+  });
+</script>
+</body>
+</html>

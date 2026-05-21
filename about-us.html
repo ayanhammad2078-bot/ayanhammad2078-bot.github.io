@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Calculator Hub</title>
+  <meta name="description" content="Learn more about Calculator Hub and our mission to provide free, accurate, and easy-to-use online calculators." />
+  <meta name="robots" content="index, follow" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-brand">Calculator <span>Hub</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li class="nav-item">
+        <a href="#">Calculators <span class="dropdown-arrow">▼</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="bmi.html">BMI Calculator</a></li>
+          <li><a href="loan-calculator.html">Loan Calculator</a></li>
+          <li><a href="gpa-calculator.html">GPA Calculator</a></li>
+          <li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+          <li><a href="age-calculator.html">Age Calculator</a></li>
+          <li><a href="compound-interest.html">Compound Interest</a></li>
+          <li><a href="calorie-calculator.html">Calorie Calculator</a></li>
+          <li><a href="unit-converter.html">Unit Converter</a></li>
+          <li><a href="discount-calculator.html">Discount Calculator</a></li>
+          <li><a href="time-calculator.html">Time Calculator</a></li>
+          <li><a href="geometry-calculator.html">Geometry Calculator</a></li>
+          <li><a href="trig-calculator.html">Trigonometry</a></li>
+          <li><a href="algebra-calculator.html">Algebra Calculator</a></li>
+          <li><a href="school-calculator.html">School Edition</a></li>
+        </ul>
+      </li>
+      <li><a href="about-us.html" class="active">About Us</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="contact-us.html">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="page-wrapper">
+  <section class="calc-container">
+    <h1 style="color: #f1f5f9; margin-bottom: 1.5rem;">About Us</h1>
+    
+    <div style="color: #94a3b8; line-height: 1.6;">
+      <p>Welcome to <strong>Calculator Hub</strong>, your premier destination for free, fast, and accurate online calculators. Our mission is to simplify complex calculations and provide you with instant answers for your everyday needs.</p>
+      
+      <h2 style="color: #f1f5f9; margin-top: 1.5rem;">Our Mission</h2>
+      <p>At Calculator Hub, we believe that everyone should have access to high-quality calculation tools without any barriers. Whether you are a student, a professional, or someone looking to manage their health or finances, our goal is to provide you with tools that are simple to use, reliable, and accessible from any device.</p>
+      
+      <h2 style="color: #f1f5f9; margin-top: 1.5rem;">What We Offer</h2>
+      <p>We provide a wide range of calculators covering various categories, including:</p>
+      <ul>
+        <li><strong>Health & Fitness:</strong> BMI and Calorie calculators.</li>
+        <li><strong>Finance:</strong> Loan and Compound Interest calculators.</li>
+        <li><strong>Education:</strong> GPA, Algebra, and Trigonometry calculators.</li>
+        <li><strong>Mathematics:</strong> Percentage, Geometry, and Time calculators.</li>
+        <li><strong>Utilities:</strong> Unit Converter and Discount calculators.</li>
+      </ul>
+      
+      <h2 style="color: #f1f5f9; margin-top: 1.5rem;">Why Choose Us?</h2>
+      <p>Our calculators are built with the latest web technologies to ensure they are fast, mobile-friendly, and completely free to use. We prioritize your privacy, ensuring that all calculations are performed in your browser and your data never leaves your device.</p>
+      
+      <p>Thank you for choosing Calculator Hub. We are committed to continuously improving our tools and adding new calculators to meet your needs.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about-us.html">About Us</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="contact-us.html">Contact Us</a>
+    <a href="bmi.html">BMI Calculator</a>
+    <a href="loan-calculator.html">Loan Calculator</a>
+    <a href="gpa-calculator.html">GPA Calculator</a>
+    <a href="percentage-calculator.html">Percentage Calculator</a>
+    <a href="age-calculator.html">Age Calculator</a>
+    <a href="compound-interest.html">Compound Interest</a>
+    <a href="calorie-calculator.html">Calorie Calculator</a>
+    <a href="unit-converter.html">Unit Converter</a>
+    <a href="discount-calculator.html">Discount Calculator</a>
+    <a href="time-calculator.html">Time Calculator</a>
+    <a href="geometry-calculator.html">Geometry Calculator</a>
+    <a href="trig-calculator.html">Trigonometry Calculator</a>
+    <a href="algebra-calculator.html">Algebra Calculator</a>
+    <a href="school-calculator.html">School Calculator</a>
+  </div>
+  <p>&copy; 2025 Calculator Hub. All rights reserved. Free online calculators for everyone.</p>
+</footer>
+
+<script src="ai-math-assistant.js"></script>
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => { navLinks.classList.toggle('open'); });
+  document.querySelectorAll(".nav-links > li > a:not(.nav-item > a)").forEach(link => {
+    link.addEventListener('click', () => { navLinks.classList.remove('open'); });
+  });
+  const navItemWithDropdown = document.querySelector(".nav-item");
+  const dropdownToggle = navItemWithDropdown.querySelector("a");
+  dropdownToggle.addEventListener('click', (e) => {
+    if (window.innerWidth <= 768 && navLinks.classList.contains('open')) {
+      e.preventDefault();
+      navItemWithDropdown.classList.toggle('active');
+    }
+  });
+</script>
+</body>
+</html>
