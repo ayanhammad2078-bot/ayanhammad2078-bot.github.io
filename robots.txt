@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ayanhammad2078-bot.github.io/sitemap.xml
