@@ -40,6 +40,9 @@
           <li><a href="school-calculator.html">School Edition</a></li>
         </ul>
       </li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="contact-us.html">Contact Us</a></li>
     </ul>
   </div>
 </nav>
@@ -156,6 +159,10 @@
 <!-- Footer -->
 <footer class="footer">
   <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about-us.html">About Us</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="contact-us.html">Contact Us</a>
     <a href="bmi.html">BMI Calculator</a>
     <a href="loan-calculator.html">Loan Calculator</a>
     <a href="gpa-calculator.html">GPA Calculator</a>
@@ -183,32 +190,32 @@
   const navLinks = document.getElementById('navLinks');
   
   navToggle.addEventListener('click', () => {
-    navLinks.classList.toggle(\'open\');
+    navLinks.classList.toggle('open');
   });
 
   // Close main menu when a link is clicked (excluding the dropdown toggle)
-  document.querySelectorAll(\".nav-links > li > a:not(.nav-item > a)\").forEach(link => {
-    link.addEventListener(\'click\', () => {
-      navLinks.classList.remove(\'open\');
+  document.querySelectorAll(".nav-links > li > a:not(.nav-item > a)").forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
     });
   });
 
   // Handle dropdown toggle for mobile
-  const navItemWithDropdown = document.querySelector(\".nav-item\");
-  const dropdownToggle = navItemWithDropdown.querySelector(\"a\");
+  const navItemWithDropdown = document.querySelector(".nav-item");
+  const dropdownToggle = navItemWithDropdown.querySelector("a");
 
-  dropdownToggle.addEventListener(\'click\', (e) => {
+  dropdownToggle.addEventListener('click', (e) => {
     // Only prevent default if on mobile and menu is open, to allow navigation on desktop
-    if (window.innerWidth <= 768 && navLinks.classList.contains(\'open\')) {
+    if (window.innerWidth <= 768 && navLinks.classList.contains('open')) {
       e.preventDefault();
-      navItemWithDropdown.classList.toggle(\'active\');
+      navItemWithDropdown.classList.toggle('active');
     }
   });
 
   // Close dropdown when main menu is closed
-  navToggle.addEventListener(\'click\', () => {
-    if (!navLinks.classList.contains(\'open\')) {
-      navItemWithDropdown.classList.remove(\'active\');
+  navToggle.addEventListener('click', () => {
+    if (!navLinks.classList.contains('open')) {
+      navItemWithDropdown.classList.remove('active');
     }
   });
 </script>
