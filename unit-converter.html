@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unit Converter - Convert Length, Weight, Temperature &amp; More Free | Calculator Hub</title>
+  <meta name="description" content="Free Unit Converter tool to convert length, weight, temperature, volume, and speed units instantly. Supports metric and imperial conversions with accurate results." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="unit-converter.html" />
+  <link rel="stylesheet" href="style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2472864752424240" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-brand">Calculator <span>Hub</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+        <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li class="nav-item">
+        <a href="#">Calculators <span class="dropdown-arrow">▼</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="bmi.html">BMI Calculator</a></li>
+          <li><a href="loan-calculator.html">Loan Calculator</a></li>
+          <li><a href="gpa-calculator.html">GPA Calculator</a></li>
+          <li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+          <li><a href="age-calculator.html">Age Calculator</a></li>
+          <li><a href="compound-interest.html">Compound Interest</a></li>
+          <li><a href="calorie-calculator.html">Calorie Calculator</a></li>
+          <li><a href="unit-converter.html">Unit Converter</a></li>
+          <li><a href="discount-calculator.html">Discount Calculator</a></li>
+          <li><a href="time-calculator.html">Time Calculator</a></li>
+          <li><a href="geometry-calculator.html">Geometry Calculator</a></li>
+          <li><a href="trig-calculator.html">Trigonometry</a></li>
+          <li><a href="algebra-calculator.html">Algebra Calculator</a></li>
+          <li><a href="school-calculator.html">School Edition</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Top Ad Slot -->
+<div style="text-align:center; padding: 1rem 1.25rem 0;">
+  <div class="ad-slot ad-slot-top">Advertisement</div>
+</div>
+
+<main class="page-wrapper">
+
+  <div class="calc-container">
+    <h1>Unit Converter</h1>
+    <p class="calc-intro">
+      The Unit Converter allows you to instantly convert between different units of measurement across five categories: length, weight, temperature, volume, and speed. Whether you need to convert miles to kilometers, pounds to kilograms, Fahrenheit to Celsius, or gallons to liters, this tool handles it all accurately and without any external dependencies.
+    </p>
+
+    <div class="form-group">
+      <label for="unitCategory">Category</label>
+      <select id="unitCategory" onchange="updateUnits()">
+        <option value="length">Length</option>
+        <option value="weight">Weight / Mass</option>
+        <option value="temperature">Temperature</option>
+        <option value="volume">Volume</option>
+        <option value="speed">Speed</option>
+      </select>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="fromUnit">From</label>
+        <select id="fromUnit"></select>
+      </div>
+      <div class="form-group">
+        <label for="toUnit">To</label>
+        <select id="toUnit"></select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="unitValue">Value to Convert</label>
+      <input type="number" id="unitValue" placeholder="Enter value..." />
+    </div>
+
+    <p class="error-msg" id="unitError">Please enter a valid number to convert.</p>
+
+    <button class="btn-calc" onclick="convertUnit()">Convert</button>
+    <button class="btn-clear" onclick="clearUnit()">Clear</button>
+
+    <div class="result-box" id="unitResult">
+      <h3>Conversion Result</h3>
+      <div class="result-value" id="unitValue2">—</div>
+      <div class="result-detail" id="unitDetail">—</div>
+    </div>
+  </div>
+
+  <!-- Middle Ad Slot -->
+  <div style="text-align:center; margin: 0.5rem 0 1.5rem;">
+    <div class="ad-slot ad-slot-middle">Advertisement</div>
+  </div>
+
+  <div class="calc-container">
+    <h2 class="section-title">How to Use the Unit Converter</h2>
+    <div class="how-to-use">
+      <ol>
+        <li>Select a <strong>category</strong> from the dropdown (Length, Weight, Temperature, Volume, or Speed).</li>
+        <li>Choose the <strong>unit you are converting from</strong> in the "From" dropdown.</li>
+        <li>Choose the <strong>unit you are converting to</strong> in the "To" dropdown.</li>
+        <li>Enter the <strong>value</strong> you want to convert.</li>
+        <li>Click <strong>Convert</strong> to see the result instantly.</li>
+      </ol>
+    </div>
+
+    <h2 class="section-title">Supported Unit Categories</h2>
+    <p style="color:#4a5568; font-size:0.93rem;">
+      <strong>Length:</strong> Millimeter, Centimeter, Meter, Kilometer, Inch, Foot, Yard, Mile.<br>
+      <strong>Weight:</strong> Milligram, Gram, Kilogram, Metric Ton, Ounce, Pound, Stone.<br>
+      <strong>Temperature:</strong> Celsius, Fahrenheit, Kelvin.<br>
+      <strong>Volume:</strong> Milliliter, Liter, Cubic Meter, Teaspoon, Tablespoon, Cup, Pint, Quart, Gallon.<br>
+      <strong>Speed:</strong> m/s, km/h, mph, Knot, Mach.
+    </p>
+  </div>
+
+  <div class="calc-container">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <h4>How do I convert Celsius to Fahrenheit?</h4>
+      <p>To convert Celsius to Fahrenheit, use the formula: °F = (°C × 9/5) + 32. For example, 100°C = (100 × 9/5) + 32 = 212°F. Our converter handles this automatically when you select the Temperature category.</p>
+    </div>
+    <div class="faq-item">
+      <h4>How many kilometers are in a mile?</h4>
+      <p>1 mile = 1.60934 kilometers. Conversely, 1 kilometer = 0.62137 miles. This is one of the most commonly needed conversions for travelers between countries using metric and imperial systems.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What is the difference between mass and weight?</h4>
+      <p>Mass is the amount of matter in an object (measured in kilograms or pounds), while weight is the force of gravity acting on that mass. In everyday use, the terms are used interchangeably, and our converter handles common mass/weight units.</p>
+    </div>
+    <div class="faq-item">
+      <h4>How many liters are in a gallon?</h4>
+      <p>1 US gallon = 3.78541 liters. Note that the US gallon and the UK (imperial) gallon are different — 1 UK gallon = 4.54609 liters. Our converter uses the US gallon standard.</p>
+    </div>
+  </div>
+
+  <!-- Related Calculators -->
+  <div class="related-calcs">
+    <h3>Related Calculators</h3>
+    <div class="related-links">
+      <a href="bmi.html">BMI Calculator</a>
+      <a href="calorie-calculator.html">Calorie Calculator</a>
+      <a href="time-calculator.html">Time Calculator</a>
+      <a href="index.html">All Calculators</a>
+    </div>
+  </div>
+
+  <!-- Bottom Ad Slot -->
+  <div style="text-align:center; margin: 1rem 0 2rem;">
+    <div class="ad-slot ad-slot-bottom">Advertisement</div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="bmi.html">BMI Calculator</a>
+    <a href="calorie-calculator.html">Calorie Calculator</a>
+    <a href="time-calculator.html">Time Calculator</a>
+    <a href="percentage-calculator.html">Percentage Calculator</a>
+  </div>
+  <p>&copy; 2025 Calculator Hub. All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', function () {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+
+  const units = {
+    length: ['Millimeter (mm)', 'Centimeter (cm)', 'Meter (m)', 'Kilometer (km)', 'Inch (in)', 'Foot (ft)', 'Yard (yd)', 'Mile (mi)'],
+    weight: ['Milligram (mg)', 'Gram (g)', 'Kilogram (kg)', 'Metric Ton (t)', 'Ounce (oz)', 'Pound (lb)', 'Stone (st)'],
+    temperature: ['Celsius (°C)', 'Fahrenheit (°F)', 'Kelvin (K)'],
+    volume: ['Milliliter (mL)', 'Liter (L)', 'Cubic Meter (m³)', 'Teaspoon (tsp)', 'Tablespoon (tbsp)', 'Cup', 'Pint (pt)', 'Quart (qt)', 'Gallon (gal)'],
+    speed: ['Meters/sec (m/s)', 'Km/hour (km/h)', 'Miles/hour (mph)', 'Knot (kn)', 'Mach']
+  };
+
+  // Conversion factors to base unit
+  const factors = {
+    length: [0.001, 0.01, 1, 1000, 0.0254, 0.3048, 0.9144, 1609.344],
+    weight: [0.000001, 0.001, 1, 1000, 0.0283495, 0.453592, 6.35029],
+    volume: [0.001, 1, 1000, 0.00492892, 0.0147868, 0.236588, 0.473176, 0.946353, 3.78541],
+    speed: [1, 0.277778, 0.44704, 0.514444, 340.29]
+  };
+
+  function updateUnits() {
+    const cat = document.getElementById('unitCategory').value;
+    const from = document.getElementById('fromUnit');
+    const to = document.getElementById('toUnit');
+    from.innerHTML = '';
+    to.innerHTML = '';
+    units[cat].forEach((u, i) => {
+      from.innerHTML += `<option value="${i}">${u}</option>`;
+      to.innerHTML += `<option value="${i}">${u}</option>`;
+    });
+    if (units[cat].length > 1) to.selectedIndex = 1;
+  }
+
+  function convertUnit() {
+    const cat = document.getElementById('unitCategory').value;
+    const fromIdx = parseInt(document.getElementById('fromUnit').value);
+    const toIdx = parseInt(document.getElementById('toUnit').value);
+    const val = parseFloat(document.getElementById('unitValue').value);
+    const errEl = document.getElementById('unitError');
+    errEl.classList.remove('show');
+
+    if (isNaN(val)) { errEl.classList.add('show'); return; }
+
+    let result;
+    const fromLabel = units[cat][fromIdx];
+    const toLabel = units[cat][toIdx];
+
+    if (cat === 'temperature') {
+      // Special case
+      let celsius;
+      if (fromIdx === 0) celsius = val;
+      else if (fromIdx === 1) celsius = (val - 32) * 5 / 9;
+      else celsius = val - 273.15;
+
+      if (toIdx === 0) result = celsius;
+      else if (toIdx === 1) result = celsius * 9 / 5 + 32;
+      else result = celsius + 273.15;
+    } else {
+      const f = factors[cat];
+      const baseValue = val * f[fromIdx];
+      result = baseValue / f[toIdx];
+    }
+
+    const formatted = Math.abs(result) < 0.0001 || Math.abs(result) > 1e10
+      ? result.toExponential(6)
+      : parseFloat(result.toFixed(8)).toString();
+
+    document.getElementById('unitValue2').textContent = formatted + ' ' + toLabel.split(' ')[0];
+    document.getElementById('unitDetail').textContent = val + ' ' + fromLabel + ' = ' + formatted + ' ' + toLabel;
+    document.getElementById('unitResult').classList.add('show');
+  }
+
+  function clearUnit() {
+    document.getElementById('unitValue').value = '';
+    document.getElementById('unitResult').classList.remove('show');
+    document.getElementById('unitError').classList.remove('show');
+  }
+
+  // Initialize on load
+  updateUnits();
+</script>
+
+</body>
+</html>

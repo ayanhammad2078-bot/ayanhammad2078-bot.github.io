@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Age Calculator - Find Your Exact Age in Years, Months &amp; Days | Calculator Hub</title>
+  <meta name="description" content="Use our free Age Calculator to find your exact age in years, months, and days from your date of birth. Also calculates days until your next birthday." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="age-calculator.html" />
+  <link rel="stylesheet" href="style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2472864752424240" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-brand">Calculator <span>Hub</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+        <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li class="nav-item">
+        <a href="#">Calculators <span class="dropdown-arrow">▼</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="bmi.html">BMI Calculator</a></li>
+          <li><a href="loan-calculator.html">Loan Calculator</a></li>
+          <li><a href="gpa-calculator.html">GPA Calculator</a></li>
+          <li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+          <li><a href="age-calculator.html">Age Calculator</a></li>
+          <li><a href="compound-interest.html">Compound Interest</a></li>
+          <li><a href="calorie-calculator.html">Calorie Calculator</a></li>
+          <li><a href="unit-converter.html">Unit Converter</a></li>
+          <li><a href="discount-calculator.html">Discount Calculator</a></li>
+          <li><a href="time-calculator.html">Time Calculator</a></li>
+          <li><a href="geometry-calculator.html">Geometry Calculator</a></li>
+          <li><a href="trig-calculator.html">Trigonometry</a></li>
+          <li><a href="algebra-calculator.html">Algebra Calculator</a></li>
+          <li><a href="school-calculator.html">School Edition</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Top Ad Slot -->
+<div style="text-align:center; padding: 1rem 1.25rem 0;">
+  <div class="ad-slot ad-slot-top">Advertisement</div>
+</div>
+
+<main class="page-wrapper">
+
+  <div class="calc-container">
+    <h1>Age Calculator</h1>
+    <p class="calc-intro">
+      The Age Calculator computes your exact age in years, months, and days based on your date of birth. It also tells you how many days are left until your next birthday. This tool is useful for filling out forms, verifying eligibility requirements, or simply satisfying your curiosity about your precise age down to the day.
+    </p>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" />
+      </div>
+      <div class="form-group">
+        <label for="calcDate">Calculate Age As Of</label>
+        <input type="date" id="calcDate" />
+      </div>
+    </div>
+
+    <p class="error-msg" id="ageError">Please enter a valid date of birth (not in the future).</p>
+
+    <button class="btn-calc" onclick="calcAge()">Calculate Age</button>
+    <button class="btn-clear" onclick="clearAge()">Clear</button>
+
+    <div class="result-box" id="ageResult">
+      <h3>Your Age</h3>
+      <div class="result-value" id="ageValue">—</div>
+      <div class="result-detail" id="ageDetail">—</div>
+    </div>
+  </div>
+
+  <!-- Middle Ad Slot -->
+  <div style="text-align:center; margin: 0.5rem 0 1.5rem;">
+    <div class="ad-slot ad-slot-middle">Advertisement</div>
+  </div>
+
+  <div class="calc-container">
+    <h2 class="section-title">How to Use the Age Calculator</h2>
+    <div class="how-to-use">
+      <ol>
+        <li>Enter your <strong>Date of Birth</strong> using the date picker.</li>
+        <li>The <strong>Calculate Age As Of</strong> field defaults to today's date. You can change it to any date to calculate age at a specific point in time.</li>
+        <li>Click <strong>Calculate Age</strong> to see your exact age in years, months, and days.</li>
+        <li>The result also shows the total number of days you have been alive and days until your next birthday.</li>
+      </ol>
+    </div>
+
+    <h2 class="section-title">Understanding Your Age Result</h2>
+    <p style="color:#4a5568; font-size:0.93rem;">
+      Your age is calculated by finding the difference between your date of birth and the selected date. The result breaks down into complete years, remaining months, and remaining days. The total days alive is calculated as the exact number of calendar days between the two dates.
+    </p>
+  </div>
+
+  <div class="calc-container">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <h4>How is age calculated exactly?</h4>
+      <p>Age is calculated by counting complete years from the date of birth to the reference date, then counting remaining complete months, and finally the remaining days. This gives a precise breakdown of your age.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Can I calculate someone else's age?</h4>
+      <p>Yes. Simply enter the person's date of birth and set the "Calculate Age As Of" field to today or any other date. The calculator works for any person, past or present.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What if I was born on February 29 (leap year)?</h4>
+      <p>The calculator handles leap year birthdays correctly. In non-leap years, the birthday is treated as March 1 for the purpose of calculating the age transition.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Can I use this to check legal age requirements?</h4>
+      <p>Yes. You can enter a date of birth and check the age as of today to verify whether someone meets a minimum age requirement (e.g., 18 or 21 years old).</p>
+    </div>
+  </div>
+
+  <!-- Related Calculators -->
+  <div class="related-calcs">
+    <h3>Related Calculators</h3>
+    <div class="related-links">
+      <a href="bmi.html">BMI Calculator</a>
+      <a href="calorie-calculator.html">Calorie Calculator</a>
+      <a href="time-calculator.html">Time Calculator</a>
+      <a href="index.html">All Calculators</a>
+    </div>
+  </div>
+
+  <!-- Bottom Ad Slot -->
+  <div style="text-align:center; margin: 1rem 0 2rem;">
+    <div class="ad-slot ad-slot-bottom">Advertisement</div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="bmi.html">BMI Calculator</a>
+    <a href="calorie-calculator.html">Calorie Calculator</a>
+    <a href="time-calculator.html">Time Calculator</a>
+    <a href="gpa-calculator.html">GPA Calculator</a>
+  </div>
+  <p>&copy; 2025 Calculator Hub. All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', function () {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+
+  // Set default "as of" date to today
+  window.addEventListener('DOMContentLoaded', function () {
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('calcDate').value = today;
+  });
+
+  function calcAge() {
+    const dobVal = document.getElementById('dob').value;
+    const calcVal = document.getElementById('calcDate').value;
+    const errEl = document.getElementById('ageError');
+    errEl.classList.remove('show');
+
+    if (!dobVal || !calcVal) { errEl.classList.add('show'); return; }
+
+    const dob = new Date(dobVal);
+    const ref = new Date(calcVal);
+
+    if (dob >= ref) { errEl.classList.add('show'); return; }
+
+    let years = ref.getFullYear() - dob.getFullYear();
+    let months = ref.getMonth() - dob.getMonth();
+    let days = ref.getDate() - dob.getDate();
+
+    if (days < 0) {
+      months--;
+      const prevMonth = new Date(ref.getFullYear(), ref.getMonth(), 0);
+      days += prevMonth.getDate();
+    }
+    if (months < 0) { years--; months += 12; }
+
+    // Total days
+    const msPerDay = 1000 * 60 * 60 * 24;
+    const totalDays = Math.floor((ref - dob) / msPerDay);
+
+    // Days until next birthday
+    let nextBday = new Date(ref.getFullYear(), dob.getMonth(), dob.getDate());
+    if (nextBday <= ref) nextBday.setFullYear(ref.getFullYear() + 1);
+    const daysUntilBday = Math.ceil((nextBday - ref) / msPerDay);
+
+    document.getElementById('ageValue').textContent = years + ' years, ' + months + ' months, ' + days + ' days';
+    document.getElementById('ageDetail').innerHTML =
+      'Total days alive: <strong>' + totalDays.toLocaleString() + ' days</strong><br>' +
+      'Days until next birthday: <strong>' + daysUntilBday + ' days</strong>';
+    document.getElementById('ageResult').classList.add('show');
+  }
+
+  function clearAge() {
+    document.getElementById('dob').value = '';
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('calcDate').value = today;
+    document.getElementById('ageResult').classList.remove('show');
+    document.getElementById('ageError').classList.remove('show');
+  }
+</script>
+
+</body>
+</html>

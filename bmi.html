@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BMI Calculator - Free &amp; Accurate Online Tool | Calculator Hub</title>
+  <meta name="description" content="Use our free BMI Calculator to find your Body Mass Index instantly. Enter your height and weight to check if you are underweight, normal, overweight, or obese." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="bmi.html" />
+  <link rel="stylesheet" href="style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2472864752424240" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-brand">Calculator <span>Hub</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+        <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li class="nav-item">
+        <a href="#">Calculators <span class="dropdown-arrow">▼</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="bmi.html">BMI Calculator</a></li>
+          <li><a href="loan-calculator.html">Loan Calculator</a></li>
+          <li><a href="gpa-calculator.html">GPA Calculator</a></li>
+          <li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+          <li><a href="age-calculator.html">Age Calculator</a></li>
+          <li><a href="compound-interest.html">Compound Interest</a></li>
+          <li><a href="calorie-calculator.html">Calorie Calculator</a></li>
+          <li><a href="unit-converter.html">Unit Converter</a></li>
+          <li><a href="discount-calculator.html">Discount Calculator</a></li>
+          <li><a href="time-calculator.html">Time Calculator</a></li>
+          <li><a href="geometry-calculator.html">Geometry Calculator</a></li>
+          <li><a href="trig-calculator.html">Trigonometry</a></li>
+          <li><a href="algebra-calculator.html">Algebra Calculator</a></li>
+          <li><a href="school-calculator.html">School Edition</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Top Ad Slot -->
+<div style="text-align:center; padding: 1rem 1.25rem 0;">
+  <div class="ad-slot ad-slot-top">Advertisement</div>
+</div>
+
+<main class="page-wrapper">
+
+  <div class="calc-container">
+    <h1>BMI Calculator</h1>
+    <p class="calc-intro">
+      The BMI Calculator helps you determine your Body Mass Index — a simple measure of body fat based on your height and weight. It is widely used by health professionals to screen for weight categories that may lead to health problems. Enter your details below to get your BMI score instantly.
+    </p>
+
+    <div class="form-group">
+      <label for="unit">Unit System</label>
+      <select id="unit" onchange="toggleUnits()">
+        <option value="metric">Metric (kg / cm)</option>
+        <option value="imperial">Imperial (lbs / inches)</option>
+      </select>
+    </div>
+
+    <div id="metricInputs">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="weightKg">Weight (kg)</label>
+          <input type="number" id="weightKg" placeholder="e.g. 70" min="1" max="500" />
+        </div>
+        <div class="form-group">
+          <label for="heightCm">Height (cm)</label>
+          <input type="number" id="heightCm" placeholder="e.g. 175" min="50" max="300" />
+        </div>
+      </div>
+    </div>
+
+    <div id="imperialInputs" style="display:none;">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="weightLbs">Weight (lbs)</label>
+          <input type="number" id="weightLbs" placeholder="e.g. 154" min="1" max="1000" />
+        </div>
+        <div class="form-group">
+          <label for="heightIn">Height (inches)</label>
+          <input type="number" id="heightIn" placeholder="e.g. 69" min="20" max="120" />
+        </div>
+      </div>
+    </div>
+
+    <p class="error-msg" id="bmiError">Please enter valid height and weight values.</p>
+
+    <button class="btn-calc" onclick="calcBMI()">Calculate BMI</button>
+    <button class="btn-clear" onclick="clearBMI()">Clear</button>
+
+    <div class="result-box" id="bmiResult">
+      <h3>Your BMI Result</h3>
+      <div class="result-value" id="bmiValue">—</div>
+      <div class="result-detail" id="bmiCategory">—</div>
+    </div>
+  </div>
+
+  <!-- Middle Ad Slot -->
+  <div style="text-align:center; margin: 0.5rem 0 1.5rem;">
+    <div class="ad-slot ad-slot-middle">Advertisement</div>
+  </div>
+
+  <!-- How to Use -->
+  <div class="calc-container">
+    <h2 class="section-title">How to Use the BMI Calculator</h2>
+    <div class="how-to-use">
+      <ol>
+        <li>Select your preferred unit system: <strong>Metric</strong> (kg/cm) or <strong>Imperial</strong> (lbs/inches).</li>
+        <li>Enter your <strong>weight</strong> in the first field.</li>
+        <li>Enter your <strong>height</strong> in the second field.</li>
+        <li>Click the <strong>Calculate BMI</strong> button.</li>
+        <li>Your BMI score and weight category will appear instantly below.</li>
+      </ol>
+    </div>
+
+    <h2 class="section-title">Understanding Your BMI Result</h2>
+    <p style="color:#cbd5e1; font-size:0.93rem; margin-bottom:0.75rem;">BMI is grouped into the following standard categories by the World Health Organization (WHO):</p>
+    <table style="width:100%; border-collapse:collapse; font-size:0.9rem;">
+      <thead>
+        <tr style="background:rgba(59, 130, 246, 0.1); border-bottom: 1px solid rgba(148, 163, 184, 0.2);">
+          <th style="padding:0.75rem 1rem; text-align:left; color:#60a5fa; font-weight:700;">BMI Range</th>
+          <th style="padding:0.75rem 1rem; text-align:left; color:#60a5fa; font-weight:700;">Category</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid rgba(148, 163, 184, 0.1);"><td style="padding:0.65rem 1rem;">Below 18.5</td><td style="padding:0.65rem 1rem;">Underweight</td></tr>
+        <tr style="border-bottom: 1px solid rgba(148, 163, 184, 0.1);"><td style="padding:0.65rem 1rem;">18.5 – 24.9</td><td style="padding:0.65rem 1rem;">Normal weight</td></tr>
+        <tr style="border-bottom: 1px solid rgba(148, 163, 184, 0.1);"><td style="padding:0.65rem 1rem;">25.0 – 29.9</td><td style="padding:0.65rem 1rem;">Overweight</td></tr>
+        <tr><td style="padding:0.65rem 1rem;">30.0 and above</td><td style="padding:0.65rem 1rem;">Obese</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- FAQ -->
+  <div class="calc-container">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <h4>What is BMI?</h4>
+      <p>BMI stands for Body Mass Index. It is a numerical value calculated from a person's weight and height. It provides a simple, inexpensive screening method for weight categories — underweight, normal, overweight, and obese.</p>
+    </div>
+    <div class="faq-item">
+      <h4>How is BMI calculated?</h4>
+      <p>BMI is calculated by dividing your weight in kilograms by the square of your height in meters: <strong>BMI = weight (kg) / height² (m²)</strong>. In imperial units: BMI = (weight in lbs × 703) / height² (inches²).</p>
+    </div>
+    <div class="faq-item">
+      <h4>Is BMI accurate for everyone?</h4>
+      <p>BMI is a useful screening tool but not a perfect measure of body fat. It does not account for muscle mass, bone density, age, or gender differences. Athletes may have a high BMI due to muscle, not fat. Always consult a healthcare professional for a full health assessment.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What is a healthy BMI?</h4>
+      <p>A BMI between 18.5 and 24.9 is considered healthy for most adults. Values below 18.5 indicate underweight, 25–29.9 indicates overweight, and 30 or above indicates obesity.</p>
+    </div>
+  </div>
+
+  <!-- Related Calculators -->
+  <div class="related-calcs">
+    <h3>Related Calculators</h3>
+    <div class="related-links">
+      <a href="calorie-calculator.html">Calorie Calculator</a>
+      <a href="age-calculator.html">Age Calculator</a>
+      <a href="percentage-calculator.html">Percentage Calculator</a>
+      <a href="unit-converter.html">Unit Converter</a>
+      <a href="index.html">All Calculators</a>
+    </div>
+  </div>
+
+  <!-- Bottom Ad Slot -->
+  <div style="text-align:center; margin: 1rem 0 2rem;">
+    <div class="ad-slot ad-slot-bottom">Advertisement</div>
+  </div>
+
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="loan-calculator.html">Loan Calculator</a>
+    <a href="gpa-calculator.html">GPA Calculator</a>
+    <a href="calorie-calculator.html">Calorie Calculator</a>
+    <a href="compound-interest.html">Compound Interest</a>
+  </div>
+  <p>&copy; 2025 Calculator Hub. All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', function () {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+
+  function toggleUnits() {
+    const unit = document.getElementById('unit').value;
+    document.getElementById('metricInputs').style.display = unit === 'metric' ? 'block' : 'none';
+    document.getElementById('imperialInputs').style.display = unit === 'imperial' ? 'block' : 'none';
+  }
+
+  function calcBMI() {
+    const unit = document.getElementById('unit').value;
+    let bmi;
+    const errEl = document.getElementById('bmiError');
+    errEl.classList.remove('show');
+
+    if (unit === 'metric') {
+      const w = parseFloat(document.getElementById('weightKg').value);
+      const h = parseFloat(document.getElementById('heightCm').value) / 100;
+      if (!w || !h || w <= 0 || h <= 0) { errEl.classList.add('show'); return; }
+      bmi = w / (h * h);
+    } else {
+      const w = parseFloat(document.getElementById('weightLbs').value);
+      const h = parseFloat(document.getElementById('heightIn').value);
+      if (!w || !h || w <= 0 || h <= 0) { errEl.classList.add('show'); return; }
+      bmi = (w * 703) / (h * h);
+    }
+
+    let category, color;
+    if (bmi < 18.5) { category = 'Underweight — Consider consulting a nutritionist.'; color = '#f59e0b'; }
+    else if (bmi < 25) { category = 'Normal weight — Great job maintaining a healthy weight!'; color = '#10b981'; }
+    else if (bmi < 30) { category = 'Overweight — Consider a balanced diet and regular exercise.'; color = '#f97316'; }
+    else { category = 'Obese — Please consult a healthcare professional.'; color = '#ef4444'; }
+
+    document.getElementById('bmiValue').textContent = bmi.toFixed(1);
+    document.getElementById('bmiValue').style.color = color;
+    document.getElementById('bmiCategory').textContent = category;
+    document.getElementById('bmiResult').classList.add('show');
+  }
+
+  function clearBMI() {
+    ['weightKg','heightCm','weightLbs','heightIn'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.value = '';
+    });
+    document.getElementById('bmiResult').classList.remove('show');
+    document.getElementById('bmiError').classList.remove('show');
+  }
+</script>
+
+</body>
+</html>

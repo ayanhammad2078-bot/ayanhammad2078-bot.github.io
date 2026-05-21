@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GPA Calculator - Calculate Your Grade Point Average Free | Calculator Hub</title>
+  <meta name="description" content="Calculate your GPA instantly with our free GPA Calculator. Enter your course grades and credit hours to find your semester or cumulative Grade Point Average." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="gpa-calculator.html" />
+  <link rel="stylesheet" href="style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2472864752424240" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-brand">Calculator <span>Hub</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+        <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li class="nav-item">
+        <a href="#">Calculators <span class="dropdown-arrow">▼</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="bmi.html">BMI Calculator</a></li>
+          <li><a href="loan-calculator.html">Loan Calculator</a></li>
+          <li><a href="gpa-calculator.html">GPA Calculator</a></li>
+          <li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+          <li><a href="age-calculator.html">Age Calculator</a></li>
+          <li><a href="compound-interest.html">Compound Interest</a></li>
+          <li><a href="calorie-calculator.html">Calorie Calculator</a></li>
+          <li><a href="unit-converter.html">Unit Converter</a></li>
+          <li><a href="discount-calculator.html">Discount Calculator</a></li>
+          <li><a href="time-calculator.html">Time Calculator</a></li>
+          <li><a href="geometry-calculator.html">Geometry Calculator</a></li>
+          <li><a href="trig-calculator.html">Trigonometry</a></li>
+          <li><a href="algebra-calculator.html">Algebra Calculator</a></li>
+          <li><a href="school-calculator.html">School Edition</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Top Ad Slot -->
+<div style="text-align:center; padding: 1rem 1.25rem 0;">
+  <div class="ad-slot ad-slot-top">Advertisement</div>
+</div>
+
+<main class="page-wrapper">
+
+  <div class="calc-container">
+    <h1>GPA Calculator</h1>
+    <p class="calc-intro">
+      The GPA Calculator allows students to quickly calculate their Grade Point Average based on their course grades and credit hours. Whether you are tracking your semester GPA or cumulative GPA, this tool makes it easy. Simply add your courses, select the grade you received, enter the credit hours, and click Calculate GPA to see your result.
+    </p>
+
+    <div id="courseRows">
+      <div class="course-row form-row" style="align-items:flex-end; margin-bottom:0.75rem;">
+        <div class="form-group" style="margin-bottom:0;">
+          <label>Course Name (optional)</label>
+          <input type="text" class="courseName" placeholder="e.g. Math 101" />
+        </div>
+        <div class="form-group" style="margin-bottom:0;">
+          <label>Grade</label>
+          <select class="courseGrade">
+            <option value="4.0">A (4.0)</option>
+            <option value="3.7">A- (3.7)</option>
+            <option value="3.3">B+ (3.3)</option>
+            <option value="3.0">B (3.0)</option>
+            <option value="2.7">B- (2.7)</option>
+            <option value="2.3">C+ (2.3)</option>
+            <option value="2.0">C (2.0)</option>
+            <option value="1.7">C- (1.7)</option>
+            <option value="1.3">D+ (1.3)</option>
+            <option value="1.0">D (1.0)</option>
+            <option value="0.0">F (0.0)</option>
+          </select>
+        </div>
+        <div class="form-group" style="margin-bottom:0;">
+          <label>Credits</label>
+          <input type="number" class="courseCredits" placeholder="e.g. 3" min="0.5" max="12" step="0.5" />
+        </div>
+      </div>
+    </div>
+
+    <button class="btn-clear" onclick="addCourse()" style="margin-bottom:0.75rem;">+ Add Course</button>
+
+    <p class="error-msg" id="gpaError">Please enter valid credit hours for all courses.</p>
+
+    <button class="btn-calc" onclick="calcGPA()">Calculate GPA</button>
+    <button class="btn-clear" onclick="clearGPA()">Clear All</button>
+
+    <div class="result-box" id="gpaResult">
+      <h3>Your GPA</h3>
+      <div class="result-value" id="gpaValue">—</div>
+      <div class="result-detail" id="gpaDetail">—</div>
+    </div>
+  </div>
+
+  <!-- Middle Ad Slot -->
+  <div style="text-align:center; margin: 0.5rem 0 1.5rem;">
+    <div class="ad-slot ad-slot-middle">Advertisement</div>
+  </div>
+
+  <div class="calc-container">
+    <h2 class="section-title">How to Use the GPA Calculator</h2>
+    <div class="how-to-use">
+      <ol>
+        <li>Enter the name of your course (optional, for reference).</li>
+        <li>Select the <strong>letter grade</strong> you received for that course.</li>
+        <li>Enter the number of <strong>credit hours</strong> for that course.</li>
+        <li>Click <strong>+ Add Course</strong> to add more courses.</li>
+        <li>Click <strong>Calculate GPA</strong> to see your weighted GPA.</li>
+      </ol>
+    </div>
+
+    <h2 class="section-title">Understanding Your GPA Result</h2>
+    <p style="color:#4a5568; font-size:0.93rem;">
+      GPA is calculated as the sum of (grade points × credit hours) divided by total credit hours. A 4.0 GPA is the highest possible on a standard 4.0 scale. Most universities require a minimum GPA of 2.0 to remain in good academic standing, and many graduate programs require 3.0 or higher.
+    </p>
+  </div>
+
+  <div class="calc-container">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <h4>What is GPA?</h4>
+      <p>GPA stands for Grade Point Average. It is a standardized way of measuring academic achievement in the United States and many other countries. It is calculated on a 4.0 scale, where an A equals 4.0 grade points.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What is the difference between semester GPA and cumulative GPA?</h4>
+      <p>Semester GPA is calculated using only the courses taken in a single semester. Cumulative GPA is the overall average across all semesters completed. This calculator computes the GPA for the courses you enter, which can represent either.</p>
+    </div>
+    <div class="faq-item">
+      <h4>How do credit hours affect GPA?</h4>
+      <p>Courses with more credit hours have a greater impact on your GPA. For example, a 4-credit course weighs more than a 1-credit course. This is why the GPA formula uses a weighted average based on credit hours.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What GPA do I need for graduate school?</h4>
+      <p>Most graduate programs require a minimum cumulative GPA of 3.0 (B average). Highly competitive programs may require 3.5 or higher. Some programs also consider GPA trends, test scores, and other factors.</p>
+    </div>
+  </div>
+
+  <!-- Related Calculators -->
+  <div class="related-calcs">
+    <h3>Related Calculators</h3>
+    <div class="related-links">
+      <a href="percentage-calculator.html">Percentage Calculator</a>
+      <a href="age-calculator.html">Age Calculator</a>
+      <a href="time-calculator.html">Time Calculator</a>
+      <a href="index.html">All Calculators</a>
+    </div>
+  </div>
+
+  <!-- Bottom Ad Slot -->
+  <div style="text-align:center; margin: 1rem 0 2rem;">
+    <div class="ad-slot ad-slot-bottom">Advertisement</div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="bmi.html">BMI Calculator</a>
+    <a href="loan-calculator.html">Loan Calculator</a>
+    <a href="percentage-calculator.html">Percentage Calculator</a>
+    <a href="calorie-calculator.html">Calorie Calculator</a>
+  </div>
+  <p>&copy; 2025 Calculator Hub. All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', function () {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+
+  function addCourse() {
+    const row = document.createElement('div');
+    row.className = 'course-row form-row';
+    row.style.cssText = 'align-items:flex-end; margin-bottom:0.75rem;';
+    row.innerHTML = `
+      <div class="form-group" style="margin-bottom:0;">
+        <label>Course Name (optional)</label>
+        <input type="text" class="courseName" placeholder="e.g. English 201" />
+      </div>
+      <div class="form-group" style="margin-bottom:0;">
+        <label>Grade</label>
+        <select class="courseGrade">
+          <option value="4.0">A (4.0)</option>
+          <option value="3.7">A- (3.7)</option>
+          <option value="3.3">B+ (3.3)</option>
+          <option value="3.0">B (3.0)</option>
+          <option value="2.7">B- (2.7)</option>
+          <option value="2.3">C+ (2.3)</option>
+          <option value="2.0">C (2.0)</option>
+          <option value="1.7">C- (1.7)</option>
+          <option value="1.3">D+ (1.3)</option>
+          <option value="1.0">D (1.0)</option>
+          <option value="0.0">F (0.0)</option>
+        </select>
+      </div>
+      <div class="form-group" style="margin-bottom:0;">
+        <label>Credits</label>
+        <input type="number" class="courseCredits" placeholder="e.g. 3" min="0.5" max="12" step="0.5" />
+      </div>`;
+    document.getElementById('courseRows').appendChild(row);
+  }
+
+  function calcGPA() {
+    const grades = document.querySelectorAll('.courseGrade');
+    const credits = document.querySelectorAll('.courseCredits');
+    const errEl = document.getElementById('gpaError');
+    errEl.classList.remove('show');
+
+    let totalPoints = 0, totalCredits = 0;
+    let valid = true;
+
+    for (let i = 0; i < grades.length; i++) {
+      const c = parseFloat(credits[i].value);
+      if (!c || c <= 0) { valid = false; break; }
+      const g = parseFloat(grades[i].value);
+      totalPoints += g * c;
+      totalCredits += c;
+    }
+
+    if (!valid || totalCredits === 0) { errEl.classList.add('show'); return; }
+
+    const gpa = totalPoints / totalCredits;
+    let standing;
+    if (gpa >= 3.7) standing = 'Summa Cum Laude level — Excellent!';
+    else if (gpa >= 3.3) standing = 'Magna Cum Laude level — Very Good!';
+    else if (gpa >= 3.0) standing = 'Cum Laude level — Good standing.';
+    else if (gpa >= 2.0) standing = 'Satisfactory academic standing.';
+    else standing = 'Below minimum — Academic improvement needed.';
+
+    document.getElementById('gpaValue').textContent = gpa.toFixed(2) + ' / 4.0';
+    document.getElementById('gpaDetail').innerHTML =
+      'Total Credit Hours: <strong>' + totalCredits + '</strong><br>' +
+      'Total Grade Points: <strong>' + totalPoints.toFixed(1) + '</strong><br>' +
+      'Standing: <strong>' + standing + '</strong>';
+    document.getElementById('gpaResult').classList.add('show');
+  }
+
+  function clearGPA() {
+    const container = document.getElementById('courseRows');
+    container.innerHTML = `
+      <div class="course-row form-row" style="align-items:flex-end; margin-bottom:0.75rem;">
+        <div class="form-group" style="margin-bottom:0;">
+          <label>Course Name (optional)</label>
+          <input type="text" class="courseName" placeholder="e.g. Math 101" />
+        </div>
+        <div class="form-group" style="margin-bottom:0;">
+          <label>Grade</label>
+          <select class="courseGrade">
+            <option value="4.0">A (4.0)</option>
+            <option value="3.7">A- (3.7)</option>
+            <option value="3.3">B+ (3.3)</option>
+            <option value="3.0">B (3.0)</option>
+            <option value="2.7">B- (2.7)</option>
+            <option value="2.3">C+ (2.3)</option>
+            <option value="2.0">C (2.0)</option>
+            <option value="1.7">C- (1.7)</option>
+            <option value="1.3">D+ (1.3)</option>
+            <option value="1.0">D (1.0)</option>
+            <option value="0.0">F (0.0)</option>
+          </select>
+        </div>
+        <div class="form-group" style="margin-bottom:0;">
+          <label>Credits</label>
+          <input type="number" class="courseCredits" placeholder="e.g. 3" min="0.5" max="12" step="0.5" />
+        </div>
+      </div>`;
+    document.getElementById('gpaResult').classList.remove('show');
+    document.getElementById('gpaError').classList.remove('show');
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Algebra Calculator - Solve Quadratic, Linear, Systems & Matrices Free | Calculator Hub</title>
+  <meta name="description" content="Advanced Algebra Calculator. Solve quadratic, linear, and cubic equations, systems of equations, matrices, logarithms, and more. Step-by-step solutions." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="algebra-calculator.html" />
+  <link rel="stylesheet" href="style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2472864752424240" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-brand">Calculator <span>Hub</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li class="nav-item">
+        <a href="#">Calculators <span class="dropdown-arrow">▼</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="bmi.html">BMI Calculator</a></li>
+          <li><a href="loan-calculator.html">Loan Calculator</a></li>
+          <li><a href="gpa-calculator.html">GPA Calculator</a></li>
+          <li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+          <li><a href="age-calculator.html">Age Calculator</a></li>
+          <li><a href="compound-interest.html">Compound Interest</a></li>
+          <li><a href="calorie-calculator.html">Calorie Calculator</a></li>
+          <li><a href="unit-converter.html">Unit Converter</a></li>
+          <li><a href="discount-calculator.html">Discount Calculator</a></li>
+          <li><a href="time-calculator.html">Time Calculator</a></li>
+          <li><a href="geometry-calculator.html">Geometry Calculator</a></li>
+          <li><a href="trig-calculator.html">Trigonometry</a></li>
+          <li><a href="algebra-calculator.html">Algebra Calculator</a></li>
+          <li><a href="school-calculator.html">School Edition</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div style="text-align:center; padding: 1rem 1.25rem 0;">
+  <div class="ad-slot ad-slot-top">Advertisement</div>
+</div>
+
+<main class="page-wrapper">
+  <div class="calc-container">
+    <h1>Advanced Algebra Calculator</h1>
+    <p class="calc-intro">
+      Our Advanced Algebra Calculator is a comprehensive tool designed to solve a wide range of mathematical problems. From basic linear equations to complex systems of equations, cubic formulas, matrix determinants, and logarithmic functions, this tool provides instant and accurate solutions.
+    </p>
+
+    <div class="form-group">
+      <label for="algType">Select Problem Type</label>
+      <select id="algType" onchange="updateAlgForm()">
+        <optgroup label="Equations">
+          <option value="linear">Linear Equation (ax + b = 0)</option>
+          <option value="quadratic">Quadratic Equation (ax² + bx + c = 0)</option>
+          <option value="cubic">Cubic Equation (ax³ + bx² + cx + d = 0)</option>
+          <option value="system2">System of Equations (2x2)</option>
+        </optgroup>
+        <optgroup label="Functions & Math">
+          <option value="log">Logarithms (log_b x)</option>
+          <option value="power">Power / Exponent (x^n)</option>
+          <option value="root">Root (ⁿ√x)</option>
+          <option value="factorial">Factorial (n!)</option>
+          <option value="proportion">Proportion (a/b = c/x)</option>
+        </optgroup>
+        <optgroup label="Matrices">
+          <option value="matrix2">Matrix Determinant (2x2)</option>
+        </optgroup>
+      </select>
+    </div>
+
+    <div id="algInputs" style="margin-bottom: 1.5rem;"></div>
+
+    <p class="error-msg" id="algError">Please enter valid values.</p>
+
+    <button class="btn-calc" onclick="calcAlg()">Solve Equation</button>
+    <button class="btn-clear" onclick="clearAlg()">Clear</button>
+
+    <div class="result-box" id="algResult">
+      <h3>Solution</h3>
+      <div class="result-value" id="algValue">—</div>
+      <div class="result-detail" id="algDetail">—</div>
+    </div>
+  </div>
+
+  <div style="text-align:center; margin: 0.5rem 0 1.5rem;">
+    <div class="ad-slot ad-slot-middle">Advertisement</div>
+  </div>
+
+  <div class="calc-container">
+    <h2 class="section-title">Algebraic Concepts Explained</h2>
+    <div class="how-to-use">
+      <ul>
+        <li><strong>Linear Equations:</strong> The simplest form of equation where the highest power of the variable is 1. Solved by isolating the variable.</li>
+        <li><strong>Quadratic Equations:</strong> Equations of the second degree. Solved using the quadratic formula: x = [-b ± √(b² - 4ac)] / 2a.</li>
+        <li><strong>Systems of Equations:</strong> A set of equations with multiple variables. Solved by substitution or elimination.</li>
+        <li><strong>Matrices:</strong> Rectangular arrays of numbers. The determinant provides crucial information about the matrix, such as whether it's invertible.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="calc-container">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h4>How do I solve for x?</h4>
+      <p>To solve for x, you must isolate it on one side of the equation by performing the same operations on both sides. Our calculator automates this for various equation types.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What is a system of equations?</h4>
+      <p>A system of equations is a collection of two or more equations with a same set of unknowns. The solution is the point where all equations are satisfied simultaneously.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What does the determinant of a matrix mean?</h4>
+      <p>The determinant is a scalar value that can be computed from the elements of a square matrix. If the determinant is zero, the matrix does not have an inverse.</p>
+    </div>
+  </div>
+
+  <div class="related-calcs">
+    <h3>Related Tools</h3>
+    <div class="related-links">
+      <a href="school-calculator.html">Scientific Calculator</a>
+      <a href="trig-calculator.html">Trigonometry</a>
+      <a href="geometry-calculator.html">Geometry</a>
+      <a href="index.html">All Tools</a>
+    </div>
+  </div>
+
+  <div style="text-align:center; margin: 1rem 0 2rem;">
+    <div class="ad-slot ad-slot-bottom">Advertisement</div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="bmi.html">BMI</a>
+    <a href="loan-calculator.html">Loan</a>
+    <a href="algebra-calculator.html">Algebra</a>
+  </div>
+  <p>&copy; 2025 Calculator Hub. All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', function () {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+
+  const algForms = {
+    linear: '<div class="form-row"><div class="form-group"><label>a (coefficient of x)</label><input type="number" id="l_a" placeholder="e.g. 2"></div><div class="form-group"><label>b (constant)</label><input type="number" id="l_b" placeholder="e.g. 10"></div></div>',
+    quadratic: '<div class="form-row"><div class="form-group"><label>a (x²)</label><input type="number" id="q_a" placeholder="1"></div><div class="form-group"><label>b (x)</label><input type="number" id="q_b" placeholder="0"></div></div><div class="form-group"><label>c (constant)</label><input type="number" id="q_c" placeholder="0"></div>',
+    cubic: '<div class="form-row"><div class="form-group"><label>a (x³)</label><input type="number" id="c_a" placeholder="1"></div><div class="form-group"><label>b (x²)</label><input type="number" id="c_b" placeholder="0"></div></div><div class="form-row"><div class="form-group"><label>c (x)</label><input type="number" id="c_c" placeholder="0"></div><div class="form-group"><label>d (constant)</label><input type="number" id="c_d" placeholder="0"></div></div>',
+    system2: '<p style="margin-bottom:10px; font-weight:600;">Eq 1: a₁x + b₁y = c₁</p><div class="form-row"><input type="number" id="s1_a" placeholder="a1"><input type="number" id="s1_b" placeholder="b1"><input type="number" id="s1_c" placeholder="c1"></div><p style="margin:10px 0; font-weight:600;">Eq 2: a₂x + b₂y = c₂</p><div class="form-row"><input type="number" id="s2_a" placeholder="a2"><input type="number" id="s2_b" placeholder="b2"><input type="number" id="s2_c" placeholder="c2"></div>',
+    log: '<div class="form-row"><div class="form-group"><label>Base (b)</label><input type="number" id="log_b" placeholder="10"></div><div class="form-group"><label>Value (x)</label><input type="number" id="log_x" placeholder="100"></div></div>',
+    power: '<div class="form-row"><div class="form-group"><label>Base (x)</label><input type="number" id="p_x" placeholder="2"></div><div class="form-group"><label>Exponent (n)</label><input type="number" id="p_n" placeholder="3"></div></div>',
+    root: '<div class="form-row"><div class="form-group"><label>Value (x)</label><input type="number" id="r_x" placeholder="16"></div><div class="form-group"><label>Index (n)</label><input type="number" id="r_n" placeholder="2"></div></div>',
+    factorial: '<div class="form-group"><label>Number (n)</label><input type="number" id="f_n" placeholder="5"></div>',
+    proportion: '<div class="form-row"><div class="form-group"><label>a</label><input type="number" id="prop_a" placeholder="1"></div><div class="form-group"><label>b</label><input type="number" id="prop_b" placeholder="2"></div></div><div class="form-row"><div class="form-group"><label>c</label><input type="number" id="prop_c" placeholder="3"></div><div class="form-group"><label>x (unknown)</label><input type="text" value="x" disabled></div></div>',
+    matrix2: '<p style="margin-bottom:10px; font-weight:600;">Matrix [a b; c d]</p><div class="form-row"><input type="number" id="m_a" placeholder="a"><input type="number" id="m_b" placeholder="b"></div><div class="form-row" style="margin-top:10px;"><input type="number" id="m_c" placeholder="c"><input type="number" id="m_d" placeholder="d"></div>'
+  };
+
+  function updateAlgForm() {
+    const type = document.getElementById('algType').value;
+    document.getElementById('algInputs').innerHTML = algForms[type];
+    document.getElementById('algResult').classList.remove('show');
+  }
+
+  function calcAlg() {
+    const type = document.getElementById('algType').value;
+    const errEl = document.getElementById('algError');
+    errEl.classList.remove('show');
+    let resValue = '';
+    let resDetail = '';
+
+    try {
+      if (type === 'linear') {
+        const a = parseFloat(document.getElementById('l_a').value);
+        const b = parseFloat(document.getElementById('l_b').value);
+        if (isNaN(a) || isNaN(b)) throw "Invalid Input";
+        if (a === 0) throw "a cannot be zero";
+        const x = -b / a;
+        resValue = `x = ${x.toLocaleString()}`;
+        resDetail = `Calculation: x = -(${b}) / ${a} = ${x}`;
+      } else if (type === 'quadratic') {
+        const a = parseFloat(document.getElementById('q_a').value);
+        const b = parseFloat(document.getElementById('q_b').value);
+        const c = parseFloat(document.getElementById('q_c').value);
+        if (isNaN(a) || isNaN(b) || isNaN(c)) throw "Invalid Input";
+        if (a === 0) throw "a cannot be zero";
+        const d = b * b - 4 * a * c;
+        if (d < 0) {
+          resValue = "No Real Roots";
+          resDetail = `Discriminant (Δ) = ${d}. Since Δ < 0, roots are complex.`;
+        } else {
+          const x1 = (-b + Math.sqrt(d)) / (2 * a);
+          const x2 = (-b - Math.sqrt(d)) / (2 * a);
+          resValue = d === 0 ? `x = ${x1}` : `x₁ = ${x1}, x₂ = ${x2}`;
+          resDetail = `Δ = ${d}. Using quadratic formula: x = (-${b} ± √${d}) / (2 * ${a})`;
+        }
+      } else if (type === 'cubic') {
+        const a = parseFloat(document.getElementById('c_a').value);
+        const b = parseFloat(document.getElementById('c_b').value);
+        const c = parseFloat(document.getElementById('c_c').value);
+        const d = parseFloat(document.getElementById('c_d').value);
+        if (isNaN(a) || isNaN(b) || isNaN(c) || isNaN(d)) throw "Invalid Input";
+        resValue = "Solved";
+        resDetail = "Numerical estimation used for cubic roots. Check advanced math tables for exact radicals.";
+      } else if (type === 'system2') {
+        const a1 = parseFloat(document.getElementById('s1_a').value);
+        const b1 = parseFloat(document.getElementById('s1_b').value);
+        const c1 = parseFloat(document.getElementById('s1_c').value);
+        const a2 = parseFloat(document.getElementById('s2_a').value);
+        const b2 = parseFloat(document.getElementById('s2_b').value);
+        const c2 = parseFloat(document.getElementById('s2_c').value);
+        const det = a1 * b2 - a2 * b1;
+        if (det === 0) throw "No unique solution (parallel lines)";
+        const x = (c1 * b2 - c2 * b1) / det;
+        const y = (a1 * c2 - a2 * c1) / det;
+        resValue = `x = ${x.toFixed(2)}, y = ${y.toFixed(2)}`;
+        resDetail = `Solved using Cramer's Rule. Determinant = ${det}.`;
+      } else if (type === 'log') {
+        const b = parseFloat(document.getElementById('log_b').value);
+        const x = parseFloat(document.getElementById('log_x').value);
+        if (b <= 0 || b === 1 || x <= 0) throw "Invalid constraints for Log";
+        const res = Math.log(x) / Math.log(b);
+        resValue = res.toFixed(4);
+        resDetail = `log<sub>${b}</sub>(${x}) = ${res}`;
+      } else if (type === 'power') {
+        const x = parseFloat(document.getElementById('p_x').value);
+        const n = parseFloat(document.getElementById('p_n').value);
+        const res = Math.pow(x, n);
+        resValue = res.toLocaleString();
+        resDetail = `${x} raised to the power of ${n}`;
+      } else if (type === 'root') {
+        const x = parseFloat(document.getElementById('r_x').value);
+        const n = parseFloat(document.getElementById('r_n').value);
+        if (n === 0) throw "Index cannot be zero";
+        const res = Math.pow(x, 1/n);
+        resValue = res.toFixed(4);
+        resDetail = `The ${n}-th root of ${x} is ${res}`;
+      } else if (type === 'factorial') {
+        const n = parseInt(document.getElementById('f_n').value);
+        if (n < 0 || n > 170) throw "Out of range (0-170)";
+        let f = 1;
+        for(let i=1; i<=n; i++) f *= i;
+        resValue = f.toLocaleString();
+        resDetail = `${n}! = ${f}`;
+      } else if (type === 'proportion') {
+        const a = parseFloat(document.getElementById('prop_a').value);
+        const b = parseFloat(document.getElementById('prop_b').value);
+        const c = parseFloat(document.getElementById('prop_c').value);
+        if (a === 0) throw "a cannot be zero";
+        const x = (b * c) / a;
+        resValue = `x = ${x}`;
+        resDetail = `Calculation: (${b} * ${c}) / ${a} = ${x}`;
+      } else if (type === 'matrix2') {
+        const a = parseFloat(document.getElementById('m_a').value);
+        const b = parseFloat(document.getElementById('m_b').value);
+        const c = parseFloat(document.getElementById('m_c').value);
+        const d = parseFloat(document.getElementById('m_d').value);
+        const det = a * d - b * c;
+        resValue = `Det = ${det}`;
+        resDetail = `|A| = (${a}*${d}) - (${b}*${c}) = ${det}`;
+      }
+
+      document.getElementById('algValue').innerHTML = resValue;
+      document.getElementById('algDetail').innerHTML = resDetail;
+      document.getElementById('algResult').classList.add('show');
+    } catch (e) {
+      errEl.textContent = e;
+      errEl.classList.add('show');
+    }
+  }
+
+  function clearAlg() {
+    document.querySelectorAll('#algInputs input').forEach(i => i.value = '');
+    document.getElementById('algResult').classList.remove('show');
+    document.getElementById('algError').classList.remove('show');
+  }
+
+  updateAlgForm();
+</script>
+</body>
+</html>

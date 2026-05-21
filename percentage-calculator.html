@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Percentage Calculator - Find Percentages Instantly Free | Calculator Hub</title>
+  <meta name="description" content="Use our free Percentage Calculator to find what percent one number is of another, calculate percentage change, or find a percentage of any number. Fast and easy." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="percentage-calculator.html" />
+  <link rel="stylesheet" href="style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2472864752424240" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-brand">Calculator <span>Hub</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+        <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li class="nav-item">
+        <a href="#">Calculators <span class="dropdown-arrow">▼</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="bmi.html">BMI Calculator</a></li>
+          <li><a href="loan-calculator.html">Loan Calculator</a></li>
+          <li><a href="gpa-calculator.html">GPA Calculator</a></li>
+          <li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+          <li><a href="age-calculator.html">Age Calculator</a></li>
+          <li><a href="compound-interest.html">Compound Interest</a></li>
+          <li><a href="calorie-calculator.html">Calorie Calculator</a></li>
+          <li><a href="unit-converter.html">Unit Converter</a></li>
+          <li><a href="discount-calculator.html">Discount Calculator</a></li>
+          <li><a href="time-calculator.html">Time Calculator</a></li>
+          <li><a href="geometry-calculator.html">Geometry Calculator</a></li>
+          <li><a href="trig-calculator.html">Trigonometry</a></li>
+          <li><a href="algebra-calculator.html">Algebra Calculator</a></li>
+          <li><a href="school-calculator.html">School Edition</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Top Ad Slot -->
+<div style="text-align:center; padding: 1rem 1.25rem 0;">
+  <div class="ad-slot ad-slot-top">Advertisement</div>
+</div>
+
+<main class="page-wrapper">
+
+  <div class="calc-container">
+    <h1>Percentage Calculator</h1>
+    <p class="calc-intro">
+      The Percentage Calculator is a versatile tool that solves three common percentage problems: finding a percentage of a number, determining what percentage one number is of another, and calculating the percentage change between two values. Whether you are working on homework, analyzing data, or calculating discounts, this tool provides instant and accurate results.
+    </p>
+
+    <!-- Mode 1 -->
+    <h2 class="section-title" style="margin-top:0;">What is X% of Y?</h2>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="pct1X">Percentage (%)</label>
+        <input type="number" id="pct1X" placeholder="e.g. 25" />
+      </div>
+      <div class="form-group">
+        <label for="pct1Y">Of Number</label>
+        <input type="number" id="pct1Y" placeholder="e.g. 200" />
+      </div>
+    </div>
+    <button class="btn-calc" onclick="calcPct1()">Calculate</button>
+    <button class="btn-clear" onclick="clearPct('pct1X','pct1Y','res1')">Clear</button>
+    <div class="result-box" id="res1">
+      <h3>Result</h3>
+      <div class="result-value" id="res1Val">—</div>
+      <div class="result-detail" id="res1Det">—</div>
+    </div>
+
+    <!-- Mode 2 -->
+    <h2 class="section-title">X is what % of Y?</h2>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="pct2X">Number (X)</label>
+        <input type="number" id="pct2X" placeholder="e.g. 50" />
+      </div>
+      <div class="form-group">
+        <label for="pct2Y">Of Number (Y)</label>
+        <input type="number" id="pct2Y" placeholder="e.g. 200" />
+      </div>
+    </div>
+    <button class="btn-calc" onclick="calcPct2()">Calculate</button>
+    <button class="btn-clear" onclick="clearPct('pct2X','pct2Y','res2')">Clear</button>
+    <div class="result-box" id="res2">
+      <h3>Result</h3>
+      <div class="result-value" id="res2Val">—</div>
+      <div class="result-detail" id="res2Det">—</div>
+    </div>
+
+    <!-- Mode 3 -->
+    <h2 class="section-title">Percentage Change from X to Y</h2>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="pct3X">Original Value (X)</label>
+        <input type="number" id="pct3X" placeholder="e.g. 80" />
+      </div>
+      <div class="form-group">
+        <label for="pct3Y">New Value (Y)</label>
+        <input type="number" id="pct3Y" placeholder="e.g. 100" />
+      </div>
+    </div>
+    <button class="btn-calc" onclick="calcPct3()">Calculate</button>
+    <button class="btn-clear" onclick="clearPct('pct3X','pct3Y','res3')">Clear</button>
+    <div class="result-box" id="res3">
+      <h3>Result</h3>
+      <div class="result-value" id="res3Val">—</div>
+      <div class="result-detail" id="res3Det">—</div>
+    </div>
+  </div>
+
+  <!-- Middle Ad Slot -->
+  <div style="text-align:center; margin: 0.5rem 0 1.5rem;">
+    <div class="ad-slot ad-slot-middle">Advertisement</div>
+  </div>
+
+  <div class="calc-container">
+    <h2 class="section-title">How to Use the Percentage Calculator</h2>
+    <div class="how-to-use">
+      <ul>
+        <li><strong>Mode 1:</strong> Enter a percentage and a number to find what that percentage of the number equals (e.g., 25% of 200 = 50).</li>
+        <li><strong>Mode 2:</strong> Enter two numbers to find what percentage the first is of the second (e.g., 50 is 25% of 200).</li>
+        <li><strong>Mode 3:</strong> Enter an original and a new value to find the percentage increase or decrease between them.</li>
+      </ul>
+    </div>
+
+    <h2 class="section-title">Understanding Percentage Results</h2>
+    <p style="color:#4a5568; font-size:0.93rem;">
+      A percentage is a way of expressing a number as a fraction of 100. Percentage change shows how much a value has increased or decreased relative to its original value. A positive percentage change means an increase; a negative value means a decrease.
+    </p>
+  </div>
+
+  <div class="calc-container">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <h4>How do I calculate a percentage of a number?</h4>
+      <p>Multiply the number by the percentage and divide by 100. For example, 20% of 150 = (20 × 150) / 100 = 30.</p>
+    </div>
+    <div class="faq-item">
+      <h4>How do I find what percentage one number is of another?</h4>
+      <p>Divide the first number by the second and multiply by 100. For example, 30 is what percent of 150? (30 / 150) × 100 = 20%.</p>
+    </div>
+    <div class="faq-item">
+      <h4>How is percentage change calculated?</h4>
+      <p>Percentage change = ((New Value - Original Value) / Original Value) × 100. A positive result is an increase; a negative result is a decrease.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What is the difference between percentage and percentage points?</h4>
+      <p>A percentage is a ratio out of 100. A percentage point is the arithmetic difference between two percentages. For example, going from 10% to 15% is a 5 percentage point increase, but a 50% relative increase.</p>
+    </div>
+  </div>
+
+  <!-- Related Calculators -->
+  <div class="related-calcs">
+    <h3>Related Calculators</h3>
+    <div class="related-links">
+      <a href="discount-calculator.html">Discount Calculator</a>
+      <a href="gpa-calculator.html">GPA Calculator</a>
+      <a href="loan-calculator.html">Loan Calculator</a>
+      <a href="compound-interest.html">Compound Interest</a>
+      <a href="index.html">All Calculators</a>
+    </div>
+  </div>
+
+  <!-- Bottom Ad Slot -->
+  <div style="text-align:center; margin: 1rem 0 2rem;">
+    <div class="ad-slot ad-slot-bottom">Advertisement</div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="discount-calculator.html">Discount Calculator</a>
+    <a href="loan-calculator.html">Loan Calculator</a>
+    <a href="bmi.html">BMI Calculator</a>
+    <a href="compound-interest.html">Compound Interest</a>
+  </div>
+  <p>&copy; 2025 Calculator Hub. All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', function () {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+
+  function calcPct1() {
+    try {
+      const x = parseFloat(document.getElementById('pct1X').value);
+      const y = parseFloat(document.getElementById('pct1Y').value);
+      if (isNaN(x) || isNaN(y) || x < 0 || y < 0) {
+        alert('Please enter valid positive numbers');
+        return;
+      }
+      const result = (x / 100) * y;
+      document.getElementById('res1Val').textContent = result.toFixed(4).replace(/\.?0+$/, '');
+      document.getElementById('res1Det').textContent = x + '% of ' + y + ' = ' + result.toFixed(4).replace(/\.?0+$/, '');
+      document.getElementById('res1').classList.add('show');
+    } catch (e) {
+      alert('Error in calculation. Please check your inputs.');
+    }
+  }
+
+  function calcPct2() {
+    try {
+      const x = parseFloat(document.getElementById('pct2X').value);
+      const y = parseFloat(document.getElementById('pct2Y').value);
+      if (isNaN(x) || isNaN(y)) {
+        alert('Please enter valid numbers');
+        return;
+      }
+      if (y === 0) {
+        alert('The second number cannot be zero');
+        return;
+      }
+      const result = (x / y) * 100;
+      document.getElementById('res2Val').textContent = result.toFixed(2) + '%';
+      document.getElementById('res2Det').textContent = x + ' is ' + result.toFixed(2) + '% of ' + y;
+      document.getElementById('res2').classList.add('show');
+    } catch (e) {
+      alert('Error in calculation. Please check your inputs.');
+    }
+  }
+
+  function calcPct3() {
+    try {
+      const x = parseFloat(document.getElementById('pct3X').value);
+      const y = parseFloat(document.getElementById('pct3Y').value);
+      if (isNaN(x) || isNaN(y)) {
+        alert('Please enter valid numbers');
+        return;
+      }
+      if (x === 0) {
+        alert('The original value cannot be zero');
+        return;
+      }
+      const change = ((y - x) / Math.abs(x)) * 100;
+      const direction = change >= 0 ? 'increase' : 'decrease';
+      document.getElementById('res3Val').textContent = (change >= 0 ? '+' : '') + change.toFixed(2) + '%';
+      document.getElementById('res3Val').style.color = change >= 0 ? '#10b981' : '#ef4444';
+      document.getElementById('res3Det').textContent = 'A ' + Math.abs(change).toFixed(2) + '% ' + direction + ' from ' + x + ' to ' + y;
+      document.getElementById('res3').classList.add('show');
+    } catch (e) {
+      alert('Error in calculation. Please check your inputs.');
+    }
+  }
+
+  function clearPct(id1, id2, resId) {
+    document.getElementById(id1).value = '';
+    document.getElementById(id2).value = '';
+    document.getElementById(resId).classList.remove('show');
+  }
+</script>
+
+</body>
+</html>

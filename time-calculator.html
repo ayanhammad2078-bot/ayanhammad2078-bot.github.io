@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Time Calculator - Add, Subtract &amp; Convert Time Durations Free | Calculator Hub</title>
+  <meta name="description" content="Use our free Time Calculator to add or subtract time durations in hours, minutes, and seconds. Also converts time between hours, minutes, seconds, and days." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="time-calculator.html" />
+  <link rel="stylesheet" href="style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2472864752424240" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-brand">Calculator <span>Hub</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+        <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li class="nav-item">
+        <a href="#">Calculators <span class="dropdown-arrow">▼</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="bmi.html">BMI Calculator</a></li>
+          <li><a href="loan-calculator.html">Loan Calculator</a></li>
+          <li><a href="gpa-calculator.html">GPA Calculator</a></li>
+          <li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+          <li><a href="age-calculator.html">Age Calculator</a></li>
+          <li><a href="compound-interest.html">Compound Interest</a></li>
+          <li><a href="calorie-calculator.html">Calorie Calculator</a></li>
+          <li><a href="unit-converter.html">Unit Converter</a></li>
+          <li><a href="discount-calculator.html">Discount Calculator</a></li>
+          <li><a href="time-calculator.html">Time Calculator</a></li>
+          <li><a href="geometry-calculator.html">Geometry Calculator</a></li>
+          <li><a href="trig-calculator.html">Trigonometry</a></li>
+          <li><a href="algebra-calculator.html">Algebra Calculator</a></li>
+          <li><a href="school-calculator.html">School Edition</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Top Ad Slot -->
+<div style="text-align:center; padding: 1rem 1.25rem 0;">
+  <div class="ad-slot ad-slot-top">Advertisement</div>
+</div>
+
+<main class="page-wrapper">
+
+  <div class="calc-container">
+    <h1>Time Calculator</h1>
+    <p class="calc-intro">
+      The Time Calculator lets you add or subtract two time durations expressed in hours, minutes, and seconds. It also includes a time conversion tool that converts any time value between seconds, minutes, hours, and days. This tool is useful for tracking work hours, calculating event durations, scheduling, and any situation where you need to perform arithmetic on time values.
+    </p>
+
+    <!-- Add / Subtract Time -->
+    <h2 class="section-title" style="margin-top:0;">Add or Subtract Time Durations</h2>
+    <p style="color:#64748b; font-size:0.88rem; margin-bottom:1rem;">Enter two time values and choose to add or subtract them.</p>
+
+    <div style="margin-bottom:1rem;">
+      <p style="font-weight:600; font-size:0.88rem; color:#374151; margin-bottom:0.5rem;">Time 1</p>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="t1h">Hours</label>
+          <input type="number" id="t1h" placeholder="0" min="0" />
+        </div>
+        <div class="form-group">
+          <label for="t1m">Minutes</label>
+          <input type="number" id="t1m" placeholder="0" min="0" max="59" />
+        </div>
+        <div class="form-group">
+          <label for="t1s">Seconds</label>
+          <input type="number" id="t1s" placeholder="0" min="0" max="59" />
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="timeOp">Operation</label>
+      <select id="timeOp">
+        <option value="add">Add (+)</option>
+        <option value="sub">Subtract (−)</option>
+      </select>
+    </div>
+
+    <div style="margin-bottom:1rem;">
+      <p style="font-weight:600; font-size:0.88rem; color:#374151; margin-bottom:0.5rem;">Time 2</p>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="t2h">Hours</label>
+          <input type="number" id="t2h" placeholder="0" min="0" />
+        </div>
+        <div class="form-group">
+          <label for="t2m">Minutes</label>
+          <input type="number" id="t2m" placeholder="0" min="0" max="59" />
+        </div>
+        <div class="form-group">
+          <label for="t2s">Seconds</label>
+          <input type="number" id="t2s" placeholder="0" min="0" max="59" />
+        </div>
+      </div>
+    </div>
+
+    <p class="error-msg" id="timeError">Please enter valid time values (non-negative numbers).</p>
+
+    <button class="btn-calc" onclick="calcTime()">Calculate</button>
+    <button class="btn-clear" onclick="clearTime()">Clear</button>
+
+    <div class="result-box" id="timeResult">
+      <h3>Result</h3>
+      <div class="result-value" id="timeValue">—</div>
+      <div class="result-detail" id="timeDetail">—</div>
+    </div>
+
+    <!-- Time Conversion -->
+    <h2 class="section-title">Time Unit Converter</h2>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="convValue">Value</label>
+        <input type="number" id="convValue" placeholder="e.g. 3600" min="0" />
+      </div>
+      <div class="form-group">
+        <label for="convFrom">From Unit</label>
+        <select id="convFrom">
+          <option value="s">Seconds</option>
+          <option value="m">Minutes</option>
+          <option value="h">Hours</option>
+          <option value="d">Days</option>
+          <option value="w">Weeks</option>
+        </select>
+      </div>
+    </div>
+
+    <button class="btn-calc" onclick="convertTime()">Convert</button>
+    <button class="btn-clear" onclick="clearConv()">Clear</button>
+
+    <div class="result-box" id="convResult">
+      <h3>Conversion Result</h3>
+      <div class="result-value" id="convValue2">—</div>
+      <div class="result-detail" id="convDetail">—</div>
+    </div>
+  </div>
+
+  <!-- Middle Ad Slot -->
+  <div style="text-align:center; margin: 0.5rem 0 1.5rem;">
+    <div class="ad-slot ad-slot-middle">Advertisement</div>
+  </div>
+
+  <div class="calc-container">
+    <h2 class="section-title">How to Use the Time Calculator</h2>
+    <div class="how-to-use">
+      <ol>
+        <li>For <strong>Add/Subtract</strong>: Enter hours, minutes, and seconds for both time values, select the operation, and click Calculate.</li>
+        <li>For <strong>Time Conversion</strong>: Enter a value, select the unit you are converting from, and click Convert to see the equivalent in all other units.</li>
+        <li>Results automatically handle carrying over — for example, 75 minutes becomes 1 hour 15 minutes.</li>
+      </ol>
+    </div>
+
+    <h2 class="section-title">Understanding Time Results</h2>
+    <p style="color:#4a5568; font-size:0.93rem;">
+      When adding time, minutes and seconds are automatically carried over into the next unit when they exceed 59. When subtracting, if the result would be negative, the calculator shows the absolute difference and notes the direction. The conversion tool shows the equivalent value in seconds, minutes, hours, days, and weeks simultaneously.
+    </p>
+  </div>
+
+  <div class="calc-container">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <h4>How do I add time durations?</h4>
+      <p>To add time, convert everything to seconds, add the totals, then convert back. For example, 1h 30m + 45m = 90 min + 45 min = 135 min = 2h 15m. Our calculator does this automatically.</p>
+    </div>
+    <div class="faq-item">
+      <h4>How many seconds are in an hour?</h4>
+      <p>There are 3,600 seconds in one hour (60 seconds × 60 minutes). There are 86,400 seconds in one day (3,600 × 24).</p>
+    </div>
+    <div class="faq-item">
+      <h4>How do I calculate total work hours?</h4>
+      <p>Enter your start and end times as two time values and use the subtract operation. For example, if you worked from 9:00 AM (9h 0m 0s) to 5:30 PM (17h 30m 0s), subtract to get 8 hours 30 minutes.</p>
+    </div>
+    <div class="faq-item">
+      <h4>How many minutes are in a day?</h4>
+      <p>There are 1,440 minutes in one day (60 minutes × 24 hours). There are 10,080 minutes in one week.</p>
+    </div>
+  </div>
+
+  <!-- Related Calculators -->
+  <div class="related-calcs">
+    <h3>Related Calculators</h3>
+    <div class="related-links">
+      <a href="age-calculator.html">Age Calculator</a>
+      <a href="unit-converter.html">Unit Converter</a>
+      <a href="percentage-calculator.html">Percentage Calculator</a>
+      <a href="index.html">All Calculators</a>
+    </div>
+  </div>
+
+  <!-- Bottom Ad Slot -->
+  <div style="text-align:center; margin: 1rem 0 2rem;">
+    <div class="ad-slot ad-slot-bottom">Advertisement</div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="age-calculator.html">Age Calculator</a>
+    <a href="unit-converter.html">Unit Converter</a>
+    <a href="bmi.html">BMI Calculator</a>
+    <a href="gpa-calculator.html">GPA Calculator</a>
+  </div>
+  <p>&copy; 2025 Calculator Hub. All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', function () {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+
+  function toSec(h, m, s) {
+    return (parseFloat(h)||0)*3600 + (parseFloat(m)||0)*60 + (parseFloat(s)||0);
+  }
+
+  function secToHMS(totalSec) {
+    const neg = totalSec < 0;
+    totalSec = Math.abs(totalSec);
+    const h = Math.floor(totalSec / 3600);
+    const m = Math.floor((totalSec % 3600) / 60);
+    const s = Math.round(totalSec % 60);
+    return { h, m, s, neg };
+  }
+
+  function calcTime() {
+    const s1 = toSec(document.getElementById('t1h').value, document.getElementById('t1m').value, document.getElementById('t1s').value);
+    const s2 = toSec(document.getElementById('t2h').value, document.getElementById('t2m').value, document.getElementById('t2s').value);
+    const op = document.getElementById('timeOp').value;
+    const errEl = document.getElementById('timeError');
+    errEl.classList.remove('show');
+
+    if (s1 < 0 || s2 < 0) { errEl.classList.add('show'); return; }
+
+    const total = op === 'add' ? s1 + s2 : s1 - s2;
+    const { h, m, s, neg } = secToHMS(total);
+
+    const sign = neg ? '−' : '';
+    document.getElementById('timeValue').textContent = sign + h + 'h ' + m + 'm ' + s + 's';
+    document.getElementById('timeDetail').innerHTML =
+      'Total seconds: <strong>' + Math.abs(total) + '</strong><br>' +
+      'Total minutes: <strong>' + (Math.abs(total) / 60).toFixed(4).replace(/\.?0+$/, '') + '</strong><br>' +
+      'Total hours: <strong>' + (Math.abs(total) / 3600).toFixed(6).replace(/\.?0+$/, '') + '</strong>' +
+      (neg ? '<br><em style="color:#f97316;">Note: Result is negative (Time 2 is greater than Time 1)</em>' : '');
+    document.getElementById('timeResult').classList.add('show');
+  }
+
+  function clearTime() {
+    ['t1h','t1m','t1s','t2h','t2m','t2s'].forEach(id => document.getElementById(id).value = '');
+    document.getElementById('timeResult').classList.remove('show');
+    document.getElementById('timeError').classList.remove('show');
+  }
+
+  function convertTime() {
+    const val = parseFloat(document.getElementById('convValue').value);
+    const from = document.getElementById('convFrom').value;
+    if (isNaN(val) || val < 0) return;
+
+    // Convert to seconds first
+    const toSecs = { s: 1, m: 60, h: 3600, d: 86400, w: 604800 };
+    const totalSec = val * toSecs[from];
+
+    const fmt = n => {
+      if (n >= 1e9) return n.toExponential(4);
+      if (n < 0.0001 && n > 0) return n.toExponential(4);
+      return parseFloat(n.toFixed(6)).toLocaleString();
+    };
+
+    document.getElementById('convValue2').textContent = fmt(totalSec) + ' seconds';
+    document.getElementById('convDetail').innerHTML =
+      '<strong>' + val + ' ' + { s:'second(s)', m:'minute(s)', h:'hour(s)', d:'day(s)', w:'week(s)' }[from] + '</strong> equals:<br>' +
+      fmt(totalSec) + ' seconds<br>' +
+      fmt(totalSec / 60) + ' minutes<br>' +
+      fmt(totalSec / 3600) + ' hours<br>' +
+      fmt(totalSec / 86400) + ' days<br>' +
+      fmt(totalSec / 604800) + ' weeks';
+    document.getElementById('convResult').classList.add('show');
+  }
+
+  function clearConv() {
+    document.getElementById('convValue').value = '';
+    document.getElementById('convResult').classList.remove('show');
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trigonometry Calculator - Calculate Sin, Cos, Tan &amp; More Free | Calculator Hub</title>
+  <meta name="description" content="Use our free Trigonometry Calculator to find sine, cosine, tangent, and inverse trig functions. Supports degrees and radians. Perfect for students and engineers." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="trig-calculator.html" />
+  <link rel="stylesheet" href="style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2472864752424240" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-brand">Calculator <span>Hub</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+        <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li class="nav-item">
+        <a href="#">Calculators <span class="dropdown-arrow">▼</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="bmi.html">BMI Calculator</a></li>
+          <li><a href="loan-calculator.html">Loan Calculator</a></li>
+          <li><a href="gpa-calculator.html">GPA Calculator</a></li>
+          <li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+          <li><a href="age-calculator.html">Age Calculator</a></li>
+          <li><a href="compound-interest.html">Compound Interest</a></li>
+          <li><a href="calorie-calculator.html">Calorie Calculator</a></li>
+          <li><a href="unit-converter.html">Unit Converter</a></li>
+          <li><a href="discount-calculator.html">Discount Calculator</a></li>
+          <li><a href="time-calculator.html">Time Calculator</a></li>
+          <li><a href="geometry-calculator.html">Geometry Calculator</a></li>
+          <li><a href="trig-calculator.html">Trigonometry</a></li>
+          <li><a href="algebra-calculator.html">Algebra Calculator</a></li>
+          <li><a href="school-calculator.html">School Edition</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Top Ad Slot -->
+<div style="text-align:center; padding: 1rem 1.25rem 0;">
+  <div class="ad-slot ad-slot-top">Advertisement</div>
+</div>
+
+<main class="page-wrapper">
+
+  <div class="calc-container">
+    <h1>Trigonometry Calculator</h1>
+    <p class="calc-intro">
+      The Trigonometry Calculator computes sine, cosine, tangent, and their inverse functions (arcsine, arccosine, arctangent). It supports both degrees and radians, making it ideal for students learning trigonometry, engineers working with angles, and anyone needing quick trig calculations. Simply enter an angle or a value and select the function you need.
+    </p>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="trigAngle">Angle / Value</label>
+        <input type="number" id="trigAngle" placeholder="e.g. 45" />
+      </div>
+      <div class="form-group">
+        <label for="trigUnit">Unit</label>
+        <select id="trigUnit">
+          <option value="deg">Degrees</option>
+          <option value="rad">Radians</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="trigFunc">Function</label>
+      <select id="trigFunc">
+        <option value="sin">Sine (sin)</option>
+        <option value="cos">Cosine (cos)</option>
+        <option value="tan">Tangent (tan)</option>
+        <option value="asin">Arcsine (sin⁻¹)</option>
+        <option value="acos">Arccosine (cos⁻¹)</option>
+        <option value="atan">Arctangent (tan⁻¹)</option>
+      </select>
+    </div>
+
+    <p class="error-msg" id="trigError">Please enter a valid number. For inverse functions, use values between -1 and 1.</p>
+
+    <button class="btn-calc" onclick="calcTrig()">Calculate</button>
+    <button class="btn-clear" onclick="clearTrig()">Clear</button>
+
+    <div class="result-box" id="trigResult">
+      <h3>Result</h3>
+      <div class="result-value" id="trigValue">—</div>
+      <div class="result-detail" id="trigDetail">—</div>
+    </div>
+  </div>
+
+  <!-- Middle Ad Slot -->
+  <div style="text-align:center; margin: 0.5rem 0 1.5rem;">
+    <div class="ad-slot ad-slot-middle">Advertisement</div>
+  </div>
+
+  <div class="calc-container">
+    <h2 class="section-title">How to Use the Trigonometry Calculator</h2>
+    <div class="how-to-use">
+      <ol>
+        <li>Enter an <strong>angle or value</strong> in the input field.</li>
+        <li>Select the <strong>unit</strong>: Degrees or Radians.</li>
+        <li>Choose a <strong>trigonometric function</strong> (sin, cos, tan, or their inverses).</li>
+        <li>Click <strong>Calculate</strong> to see the result.</li>
+        <li>The result is displayed with both decimal and degree/radian equivalents where applicable.</li>
+      </ol>
+    </div>
+
+    <h2 class="section-title">Understanding Trigonometric Functions</h2>
+    <p style="color:#4a5568; font-size:0.93rem;">
+      <strong>Sine (sin):</strong> The ratio of the opposite side to the hypotenuse in a right triangle.<br>
+      <strong>Cosine (cos):</strong> The ratio of the adjacent side to the hypotenuse.<br>
+      <strong>Tangent (tan):</strong> The ratio of the opposite side to the adjacent side (sin/cos).<br>
+      <strong>Inverse functions:</strong> Find the angle when you know the ratio value.
+    </p>
+  </div>
+
+  <div class="calc-container">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <h4>What is the difference between degrees and radians?</h4>
+      <p>Degrees and radians are two ways to measure angles. A full circle is 360 degrees or 2π radians. Radians are the standard unit in mathematics and physics. To convert: radians = degrees × π/180.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What is the sine of 90 degrees?</h4>
+      <p>The sine of 90 degrees (or π/2 radians) is exactly 1. This represents the maximum value sine can reach.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What are inverse trigonometric functions used for?</h4>
+      <p>Inverse trig functions (arcsin, arccos, arctan) find the angle when you know the ratio. For example, if sin(θ) = 0.5, then arcsin(0.5) = 30 degrees.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Why is tangent undefined at 90 degrees?</h4>
+      <p>Tangent = sin/cos. At 90 degrees, cosine equals 0, which makes the division undefined. This is why tan(90°) does not have a real value.</p>
+    </div>
+  </div>
+
+  <!-- Related Calculators -->
+  <div class="related-calcs">
+    <h3>Related Calculators</h3>
+    <div class="related-links">
+      <a href="geometry-calculator.html">Geometry Calculator</a>
+      <a href="algebra-calculator.html">Algebra Calculator</a>
+      <a href="percentage-calculator.html">Percentage Calculator</a>
+      <a href="index.html">All Calculators</a>
+    </div>
+  </div>
+
+  <!-- Bottom Ad Slot -->
+  <div style="text-align:center; margin: 1rem 0 2rem;">
+    <div class="ad-slot ad-slot-bottom">Advertisement</div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="geometry-calculator.html">Geometry</a>
+    <a href="algebra-calculator.html">Algebra</a>
+    <a href="percentage-calculator.html">Percentage Calculator</a>
+    <a href="unit-converter.html">Unit Converter</a>
+  </div>
+  <p>&copy; 2025 Calculator Hub. All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', function () {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+
+  function calcTrig() {
+    const val = parseFloat(document.getElementById('trigAngle').value);
+    const unit = document.getElementById('trigUnit').value;
+    const func = document.getElementById('trigFunc').value;
+    const errEl = document.getElementById('trigError');
+    errEl.classList.remove('show');
+
+    if (isNaN(val)) { errEl.classList.add('show'); return; }
+
+    let angle = val;
+    if (unit === 'deg') angle = val * Math.PI / 180;
+
+    let result;
+    let label = '';
+
+    if (func === 'sin') {
+      result = Math.sin(angle);
+      label = `sin(${val}${unit === 'deg' ? '°' : ' rad'})`;
+    } else if (func === 'cos') {
+      result = Math.cos(angle);
+      label = `cos(${val}${unit === 'deg' ? '°' : ' rad'})`;
+    } else if (func === 'tan') {
+      result = Math.tan(angle);
+      label = `tan(${val}${unit === 'deg' ? '°' : ' rad'})`;
+    } else if (func === 'asin') {
+      if (val < -1 || val > 1) { errEl.classList.add('show'); return; }
+      result = Math.asin(val);
+      const resultDeg = result * 180 / Math.PI;
+      label = `arcsin(${val}) = ${resultDeg.toFixed(4)}° or ${result.toFixed(6)} rad`;
+      document.getElementById('trigValue').textContent = resultDeg.toFixed(4) + '°';
+      document.getElementById('trigDetail').innerHTML = label;
+      document.getElementById('trigResult').classList.add('show');
+      return;
+    } else if (func === 'acos') {
+      if (val < -1 || val > 1) { errEl.classList.add('show'); return; }
+      result = Math.acos(val);
+      const resultDeg = result * 180 / Math.PI;
+      label = `arccos(${val}) = ${resultDeg.toFixed(4)}° or ${result.toFixed(6)} rad`;
+      document.getElementById('trigValue').textContent = resultDeg.toFixed(4) + '°';
+      document.getElementById('trigDetail').innerHTML = label;
+      document.getElementById('trigResult').classList.add('show');
+      return;
+    } else if (func === 'atan') {
+      result = Math.atan(val);
+      const resultDeg = result * 180 / Math.PI;
+      label = `arctan(${val}) = ${resultDeg.toFixed(4)}° or ${result.toFixed(6)} rad`;
+      document.getElementById('trigValue').textContent = resultDeg.toFixed(4) + '°';
+      document.getElementById('trigDetail').innerHTML = label;
+      document.getElementById('trigResult').classList.add('show');
+      return;
+    }
+
+    document.getElementById('trigValue').textContent = result.toFixed(6);
+    document.getElementById('trigDetail').innerHTML = label + '<br>Result: <strong>' + result.toFixed(6) + '</strong>';
+    document.getElementById('trigResult').classList.add('show');
+  }
+
+  function clearTrig() {
+    document.getElementById('trigAngle').value = '';
+    document.getElementById('trigResult').classList.remove('show');
+    document.getElementById('trigError').classList.remove('show');
+  }
+</script>
+
+</body>
+</html>

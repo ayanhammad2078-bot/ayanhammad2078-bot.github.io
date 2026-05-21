@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discount Calculator - Find Sale Price &amp; Savings Instantly Free | Calculator Hub</title>
+  <meta name="description" content="Use our free Discount Calculator to find the final sale price after a discount, how much you save, and the discount percentage. Perfect for shopping and pricing." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="discount-calculator.html" />
+  <link rel="stylesheet" href="style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2472864752424240" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-brand">Calculator <span>Hub</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+        <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li class="nav-item">
+        <a href="#">Calculators <span class="dropdown-arrow">▼</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="bmi.html">BMI Calculator</a></li>
+          <li><a href="loan-calculator.html">Loan Calculator</a></li>
+          <li><a href="gpa-calculator.html">GPA Calculator</a></li>
+          <li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+          <li><a href="age-calculator.html">Age Calculator</a></li>
+          <li><a href="compound-interest.html">Compound Interest</a></li>
+          <li><a href="calorie-calculator.html">Calorie Calculator</a></li>
+          <li><a href="unit-converter.html">Unit Converter</a></li>
+          <li><a href="discount-calculator.html">Discount Calculator</a></li>
+          <li><a href="time-calculator.html">Time Calculator</a></li>
+          <li><a href="geometry-calculator.html">Geometry Calculator</a></li>
+          <li><a href="trig-calculator.html">Trigonometry</a></li>
+          <li><a href="algebra-calculator.html">Algebra Calculator</a></li>
+          <li><a href="school-calculator.html">School Edition</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Top Ad Slot -->
+<div style="text-align:center; padding: 1rem 1.25rem 0;">
+  <div class="ad-slot ad-slot-top">Advertisement</div>
+</div>
+
+<main class="page-wrapper">
+
+  <div class="calc-container">
+    <h1>Discount Calculator</h1>
+    <p class="calc-intro">
+      The Discount Calculator helps you quickly find the final price of an item after applying a discount percentage, the total amount you save, and the effective discount rate. Whether you are shopping during a sale, comparing prices, or setting prices for your business, this tool gives you instant and accurate results without any complicated math.
+    </p>
+
+    <!-- Mode 1: Original Price + Discount % -->
+    <h2 class="section-title" style="margin-top:0;">Find Sale Price from Discount %</h2>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="d1Original">Original Price ($)</label>
+        <input type="number" id="d1Original" placeholder="e.g. 120" min="0" step="0.01" />
+      </div>
+      <div class="form-group">
+        <label for="d1Pct">Discount (%)</label>
+        <input type="number" id="d1Pct" placeholder="e.g. 25" min="0" max="100" />
+      </div>
+    </div>
+    <button class="btn-calc" onclick="calcDiscount1()">Calculate</button>
+    <button class="btn-clear" onclick="clearD('d1Original','d1Pct','dRes1')">Clear</button>
+    <div class="result-box" id="dRes1">
+      <h3>Result</h3>
+      <div class="result-value" id="dRes1Val">—</div>
+      <div class="result-detail" id="dRes1Det">—</div>
+    </div>
+
+    <!-- Mode 2: Find discount % from original and sale price -->
+    <h2 class="section-title">Find Discount % from Sale Price</h2>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="d2Original">Original Price ($)</label>
+        <input type="number" id="d2Original" placeholder="e.g. 120" min="0" step="0.01" />
+      </div>
+      <div class="form-group">
+        <label for="d2Sale">Sale Price ($)</label>
+        <input type="number" id="d2Sale" placeholder="e.g. 90" min="0" step="0.01" />
+      </div>
+    </div>
+    <button class="btn-calc" onclick="calcDiscount2()">Calculate</button>
+    <button class="btn-clear" onclick="clearD('d2Original','d2Sale','dRes2')">Clear</button>
+    <div class="result-box" id="dRes2">
+      <h3>Result</h3>
+      <div class="result-value" id="dRes2Val">—</div>
+      <div class="result-detail" id="dRes2Det">—</div>
+    </div>
+
+    <!-- Mode 3: Double discount -->
+    <h2 class="section-title">Double Discount (Stacked Discounts)</h2>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="d3Original">Original Price ($)</label>
+        <input type="number" id="d3Original" placeholder="e.g. 200" min="0" step="0.01" />
+      </div>
+      <div class="form-group">
+        <label for="d3Pct1">First Discount (%)</label>
+        <input type="number" id="d3Pct1" placeholder="e.g. 20" min="0" max="100" />
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="d3Pct2">Second Discount (%)</label>
+      <input type="number" id="d3Pct2" placeholder="e.g. 10" min="0" max="100" />
+    </div>
+    <button class="btn-calc" onclick="calcDiscount3()">Calculate</button>
+    <button class="btn-clear" onclick="clearD3()">Clear</button>
+    <div class="result-box" id="dRes3">
+      <h3>Result</h3>
+      <div class="result-value" id="dRes3Val">—</div>
+      <div class="result-detail" id="dRes3Det">—</div>
+    </div>
+  </div>
+
+  <!-- Middle Ad Slot -->
+  <div style="text-align:center; margin: 0.5rem 0 1.5rem;">
+    <div class="ad-slot ad-slot-middle">Advertisement</div>
+  </div>
+
+  <div class="calc-container">
+    <h2 class="section-title">How to Use the Discount Calculator</h2>
+    <div class="how-to-use">
+      <ul>
+        <li><strong>Mode 1:</strong> Enter the original price and discount percentage to find the final sale price and savings amount.</li>
+        <li><strong>Mode 2:</strong> Enter the original price and the sale price to find out what percentage discount was applied.</li>
+        <li><strong>Mode 3:</strong> Enter an original price and two stacked discounts to see the final price after both are applied sequentially.</li>
+      </ul>
+    </div>
+
+    <h2 class="section-title">Understanding Discount Results</h2>
+    <p style="color:#4a5568; font-size:0.93rem;">
+      A discount percentage reduces the original price by that fraction. Two stacked discounts are not simply added together — a 20% discount followed by a 10% discount is not the same as a 30% discount. The second discount is applied to the already-reduced price, resulting in a total effective discount of 28% in this example.
+    </p>
+  </div>
+
+  <div class="calc-container">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <h4>How do I calculate a discount?</h4>
+      <p>To find the sale price: Sale Price = Original Price × (1 - Discount% / 100). To find the savings: Savings = Original Price × (Discount% / 100). For example, a 25% discount on $120: Sale Price = $120 × 0.75 = $90; Savings = $30.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Are stacked discounts the same as adding them together?</h4>
+      <p>No. Stacked discounts are applied sequentially, not additively. A 20% discount followed by a 10% discount gives an effective total discount of 28%, not 30%. This is because the second discount applies to the already-reduced price.</p>
+    </div>
+    <div class="faq-item">
+      <h4>How do I find the original price from a sale price?</h4>
+      <p>If you know the sale price and the discount percentage, the original price = Sale Price / (1 - Discount% / 100). For example, if an item is $90 after a 25% discount, the original price = $90 / 0.75 = $120.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What is the difference between a discount and a markdown?</h4>
+      <p>In retail, a discount is a temporary price reduction offered to customers, while a markdown is a permanent reduction in the selling price of an item. Both are calculated the same way mathematically.</p>
+    </div>
+  </div>
+
+  <!-- Related Calculators -->
+  <div class="related-calcs">
+    <h3>Related Calculators</h3>
+    <div class="related-links">
+      <a href="percentage-calculator.html">Percentage Calculator</a>
+      <a href="loan-calculator.html">Loan Calculator</a>
+      <a href="compound-interest.html">Compound Interest</a>
+      <a href="index.html">All Calculators</a>
+    </div>
+  </div>
+
+  <!-- Bottom Ad Slot -->
+  <div style="text-align:center; margin: 1rem 0 2rem;">
+    <div class="ad-slot ad-slot-bottom">Advertisement</div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="percentage-calculator.html">Percentage Calculator</a>
+    <a href="loan-calculator.html">Loan Calculator</a>
+    <a href="bmi.html">BMI Calculator</a>
+    <a href="compound-interest.html">Compound Interest</a>
+  </div>
+  <p>&copy; 2025 Calculator Hub. All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', function () {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+
+  function calcDiscount1() {
+    try {
+      const orig = parseFloat(document.getElementById('d1Original').value);
+      const pct = parseFloat(document.getElementById('d1Pct').value);
+      if (isNaN(orig) || isNaN(pct)) {
+        alert('Please enter valid numbers');
+        return;
+      }
+      if (orig < 0 || pct < 0 || pct > 100) {
+        alert('Original price must be positive and discount must be between 0-100%');
+        return;
+      }
+      const savings = orig * pct / 100;
+      const sale = orig - savings;
+      document.getElementById('dRes1Val').textContent = '$' + sale.toFixed(2);
+      document.getElementById('dRes1Det').innerHTML =
+        'Original Price: <strong>$' + orig.toFixed(2) + '</strong><br>' +
+        'Discount (' + pct + '%): <strong>−$' + savings.toFixed(2) + '</strong><br>' +
+        'Final Sale Price: <strong>$' + sale.toFixed(2) + '</strong>';
+      document.getElementById('dRes1').classList.add('show');
+    } catch (e) {
+      alert('Error in calculation. Please check your inputs.');
+    }
+  }
+
+  function calcDiscount2() {
+    try {
+      const orig = parseFloat(document.getElementById('d2Original').value);
+      const sale = parseFloat(document.getElementById('d2Sale').value);
+      if (isNaN(orig) || isNaN(sale)) {
+        alert('Please enter valid numbers');
+        return;
+      }
+      if (orig <= 0) {
+        alert('Original price must be greater than zero');
+        return;
+      }
+      if (sale < 0 || sale > orig) {
+        alert('Sale price must be between 0 and the original price');
+        return;
+      }
+      const pct = ((orig - sale) / orig) * 100;
+      const savings = orig - sale;
+      document.getElementById('dRes2Val').textContent = pct.toFixed(2) + '% off';
+      document.getElementById('dRes2Det').innerHTML =
+        'Original Price: <strong>$' + orig.toFixed(2) + '</strong><br>' +
+        'Sale Price: <strong>$' + sale.toFixed(2) + '</strong><br>' +
+        'You Save: <strong>$' + savings.toFixed(2) + ' (' + pct.toFixed(2) + '% off)</strong>';
+      document.getElementById('dRes2').classList.add('show');
+    } catch (e) {
+      alert('Error in calculation. Please check your inputs.');
+    }
+  }
+
+  function calcDiscount3() {
+    try {
+      const orig = parseFloat(document.getElementById('d3Original').value);
+      const p1 = parseFloat(document.getElementById('d3Pct1').value);
+      const p2 = parseFloat(document.getElementById('d3Pct2').value);
+      if (isNaN(orig) || isNaN(p1) || isNaN(p2)) {
+        alert('Please enter valid numbers');
+        return;
+      }
+      if (orig < 0 || p1 < 0 || p2 < 0 || p1 > 100 || p2 > 100) {
+        alert('Original price must be positive and discounts must be between 0-100%');
+        return;
+      }
+      const afterFirst = orig * (1 - p1 / 100);
+      const afterSecond = afterFirst * (1 - p2 / 100);
+      const totalSavings = orig - afterSecond;
+      const effectivePct = (totalSavings / orig) * 100;
+      document.getElementById('dRes3Val').textContent = '$' + afterSecond.toFixed(2);
+      document.getElementById('dRes3Det').innerHTML =
+        'After first discount (' + p1 + '%): <strong>$' + afterFirst.toFixed(2) + '</strong><br>' +
+        'After second discount (' + p2 + '%): <strong>$' + afterSecond.toFixed(2) + '</strong><br>' +
+        'Total Savings: <strong>$' + totalSavings.toFixed(2) + '</strong><br>' +
+        'Effective Discount: <strong>' + effectivePct.toFixed(2) + '%</strong>';
+      document.getElementById('dRes3').classList.add('show');
+    } catch (e) {
+      alert('Error in calculation. Please check your inputs.');
+    }
+  }
+
+  function clearD(id1, id2, resId) {
+    document.getElementById(id1).value = '';
+    document.getElementById(id2).value = '';
+    document.getElementById(resId).classList.remove('show');
+  }
+
+  function clearD3() {
+    ['d3Original','d3Pct1','d3Pct2'].forEach(id => document.getElementById(id).value = '');
+    document.getElementById('dRes3').classList.remove('show');
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loan Calculator - Monthly Payment &amp; Interest Estimator | Calculator Hub</title>
+  <meta name="description" content="Use our free Loan Calculator to estimate your monthly payment, total interest paid, and total loan cost. Works for mortgages, car loans, and personal loans." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="loan-calculator.html" />
+  <link rel="stylesheet" href="style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2472864752424240" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-brand">Calculator <span>Hub</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+        <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li class="nav-item">
+        <a href="#">Calculators <span class="dropdown-arrow">▼</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="bmi.html">BMI Calculator</a></li>
+          <li><a href="loan-calculator.html">Loan Calculator</a></li>
+          <li><a href="gpa-calculator.html">GPA Calculator</a></li>
+          <li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+          <li><a href="age-calculator.html">Age Calculator</a></li>
+          <li><a href="compound-interest.html">Compound Interest</a></li>
+          <li><a href="calorie-calculator.html">Calorie Calculator</a></li>
+          <li><a href="unit-converter.html">Unit Converter</a></li>
+          <li><a href="discount-calculator.html">Discount Calculator</a></li>
+          <li><a href="time-calculator.html">Time Calculator</a></li>
+          <li><a href="geometry-calculator.html">Geometry Calculator</a></li>
+          <li><a href="trig-calculator.html">Trigonometry</a></li>
+          <li><a href="algebra-calculator.html">Algebra Calculator</a></li>
+          <li><a href="school-calculator.html">School Edition</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Top Ad Slot -->
+<div style="text-align:center; padding: 1rem 1.25rem 0;">
+  <div class="ad-slot ad-slot-top">Advertisement</div>
+</div>
+
+<main class="page-wrapper">
+
+  <div class="calc-container">
+    <h1>Loan Calculator</h1>
+    <p class="calc-intro">
+      The Loan Calculator helps you estimate your monthly loan payments, total interest paid, and the overall cost of borrowing. Whether you are planning a mortgage, car loan, or personal loan, this tool gives you a clear picture of your financial commitment before you sign anything. Simply enter the loan amount, interest rate, and loan term to see your results.
+    </p>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="loanAmount">Loan Amount ($)</label>
+        <input type="number" id="loanAmount" placeholder="e.g. 20000" min="1" />
+      </div>
+      <div class="form-group">
+        <label for="loanRate">Annual Interest Rate (%)</label>
+        <input type="number" id="loanRate" placeholder="e.g. 5.5" min="0" step="0.01" />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="loanTerm">Loan Term (years)</label>
+        <input type="number" id="loanTerm" placeholder="e.g. 5" min="1" max="50" />
+      </div>
+      <div class="form-group">
+        <label for="loanType">Loan Type</label>
+        <select id="loanType">
+          <option value="amortized">Amortized (Fixed Monthly)</option>
+          <option value="interest">Interest Only</option>
+        </select>
+      </div>
+    </div>
+
+    <p class="error-msg" id="loanError">Please fill in all fields with valid positive numbers.</p>
+
+    <button class="btn-calc" onclick="calcLoan()">Calculate Loan</button>
+    <button class="btn-clear" onclick="clearLoan()">Clear</button>
+
+    <div class="result-box" id="loanResult">
+      <h3>Loan Summary</h3>
+      <div class="result-value" id="monthlyPayment">—</div>
+      <div class="result-detail" id="loanDetail">—</div>
+    </div>
+  </div>
+
+  <!-- Middle Ad Slot -->
+  <div style="text-align:center; margin: 0.5rem 0 1.5rem;">
+    <div class="ad-slot ad-slot-middle">Advertisement</div>
+  </div>
+
+  <div class="calc-container">
+    <h2 class="section-title">How to Use the Loan Calculator</h2>
+    <div class="how-to-use">
+      <ol>
+        <li>Enter the total <strong>loan amount</strong> you wish to borrow.</li>
+        <li>Enter the <strong>annual interest rate</strong> offered by your lender.</li>
+        <li>Enter the <strong>loan term</strong> in years (e.g., 5, 10, 30).</li>
+        <li>Select the <strong>loan type</strong>: amortized (standard) or interest-only.</li>
+        <li>Click <strong>Calculate Loan</strong> to see your monthly payment, total interest, and total cost.</li>
+      </ol>
+    </div>
+
+    <h2 class="section-title">Understanding Your Loan Results</h2>
+    <p style="color:#4a5568; font-size:0.93rem;">
+      <strong>Monthly Payment</strong> is the fixed amount you pay each month. <strong>Total Interest</strong> is the extra amount you pay on top of the principal over the life of the loan. <strong>Total Cost</strong> is the sum of the principal and all interest paid. A lower interest rate or shorter term reduces your total cost significantly.
+    </p>
+  </div>
+
+  <div class="calc-container">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <h4>How is a monthly loan payment calculated?</h4>
+      <p>For an amortized loan, the formula is: M = P[r(1+r)^n] / [(1+r)^n - 1], where P is the principal, r is the monthly interest rate, and n is the number of payments. Our calculator handles this automatically.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What is the difference between an amortized and interest-only loan?</h4>
+      <p>In an amortized loan, each payment covers both interest and principal, so the balance decreases over time. In an interest-only loan, you only pay interest for a set period, meaning the principal does not reduce until you start making principal payments.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Does a higher interest rate always mean a worse deal?</h4>
+      <p>Generally yes — a higher rate means you pay more in total interest. However, loan fees, prepayment penalties, and other terms also affect the true cost. Always compare the Annual Percentage Rate (APR) across lenders.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Can I use this for a mortgage calculation?</h4>
+      <p>Yes. Enter your home loan amount, the mortgage interest rate, and the term (typically 15 or 30 years) to estimate your monthly mortgage payment. Note that actual mortgage payments may also include property taxes and insurance (escrow).</p>
+    </div>
+    <div class="faq-item">
+      <h4>What happens if I make extra payments?</h4>
+      <p>Making extra payments reduces your principal faster, which lowers the total interest you pay and can shorten your loan term. This calculator shows the standard payment schedule; consult your lender for prepayment options.</p>
+    </div>
+  </div>
+
+  <!-- Related Calculators -->
+  <div class="related-calcs">
+    <h3>Related Calculators</h3>
+    <div class="related-links">
+      <a href="compound-interest.html">Compound Interest</a>
+      <a href="percentage-calculator.html">Percentage Calculator</a>
+      <a href="discount-calculator.html">Discount Calculator</a>
+      <a href="index.html">All Calculators</a>
+    </div>
+  </div>
+
+  <!-- Bottom Ad Slot -->
+  <div style="text-align:center; margin: 1rem 0 2rem;">
+    <div class="ad-slot ad-slot-bottom">Advertisement</div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="bmi.html">BMI Calculator</a>
+    <a href="compound-interest.html">Compound Interest</a>
+    <a href="gpa-calculator.html">GPA Calculator</a>
+    <a href="discount-calculator.html">Discount Calculator</a>
+  </div>
+  <p>&copy; 2025 Calculator Hub. All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', function () {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+
+  function calcLoan() {
+    const P = parseFloat(document.getElementById('loanAmount').value);
+    const annualRate = parseFloat(document.getElementById('loanRate').value);
+    const years = parseFloat(document.getElementById('loanTerm').value);
+    const type = document.getElementById('loanType').value;
+    const errEl = document.getElementById('loanError');
+    errEl.classList.remove('show');
+
+    if (!P || !annualRate || !years || P <= 0 || annualRate < 0 || years <= 0) {
+      errEl.classList.add('show'); return;
+    }
+
+    const r = annualRate / 100 / 12;
+    const n = years * 12;
+    let monthly, totalPaid, totalInterest;
+
+    if (type === 'amortized') {
+      if (r === 0) {
+        monthly = P / n;
+      } else {
+        monthly = P * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+      }
+      totalPaid = monthly * n;
+      totalInterest = totalPaid - P;
+    } else {
+      monthly = P * r;
+      totalPaid = monthly * n + P;
+      totalInterest = monthly * n;
+    }
+
+    document.getElementById('monthlyPayment').textContent = '$' + monthly.toFixed(2) + ' / month';
+    document.getElementById('loanDetail').innerHTML =
+      'Total Interest Paid: <strong>$' + totalInterest.toFixed(2) + '</strong><br>' +
+      'Total Amount Paid: <strong>$' + totalPaid.toFixed(2) + '</strong><br>' +
+      'Loan Term: <strong>' + years + ' year(s) (' + n + ' payments)</strong>';
+    document.getElementById('loanResult').classList.add('show');
+  }
+
+  function clearLoan() {
+    ['loanAmount','loanRate','loanTerm'].forEach(id => document.getElementById(id).value = '');
+    document.getElementById('loanResult').classList.remove('show');
+    document.getElementById('loanError').classList.remove('show');
+  }
+</script>
+
+</body>
+</html>
