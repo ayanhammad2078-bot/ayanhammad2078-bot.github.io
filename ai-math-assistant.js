@@ -18,18 +18,18 @@ class AIMathAssistant {
             <div id="ai-math-widget" class="ai-math-widget">
                 <div class="ai-math-toggle" id="aiMathToggle">
                     <span class="ai-math-icon">🤖</span>
-                    <span class="ai-math-label">Math AI</span>
+                    <span class="ai-math-label">CalcAI</span>
                 </div>
                 
                 <div class="ai-math-panel" id="aiMathPanel">
                     <div class="ai-math-header">
-                        <h3>AI Math Assistant</h3>
+                        <h3>CalcAI Assistant</h3>
                         <button class="ai-math-close" id="aiMathClose">✕</button>
                     </div>
                     
                     <div class="ai-math-chat" id="aiMathChat">
                         <div class="ai-math-message ai-message">
-                            <p>Hi! I'm your AI Math Assistant. Paste any equation, and I'll solve it step-by-step and explain how it works.</p>
+                            <p>Hi! I'm CalcAI, your math assistant. Paste any equation, and I'll solve it step-by-step and explain how it works.</p>
                             <p style="font-size: 0.85em; margin-top: 8px; opacity: 0.8;">Examples: 2x + 5 = 13, x² - 4 = 0, 3x + 2y = 10</p>
                         </div>
                     </div>
